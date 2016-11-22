@@ -8,6 +8,7 @@
   background-repeat: no-repeat
   background-size: 100% 4rem
   border-top: 2px solid $primary
+  overflow: hidden
   padding-bottom: 3rem
   padding-top: 2rem
   &:first-child
@@ -17,10 +18,11 @@
     border-top-color: $purple
 
 .property-links
-  float: right
+  align-items: center
+  display: flex
   font-size: 0.7rem
+  justify-content: flex-end
   opacity: 0.5
-  padding: 0.25rem 0
   transition-duration: $speed
   transition-property: opacity
   a
@@ -98,6 +100,8 @@
   .property-header
     padding-left: 2rem
     padding-right: 2rem
+  .property-links
+    margin-bottom: 0.5rem
 
 +desktop
   .list
@@ -105,3 +109,6 @@
   .property-header
     padding-left: 3rem
     padding-right: 3rem
+  .property-links
+    float: right
+    padding: 0.25rem 0
