@@ -6,8 +6,8 @@
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
     "build-autoprefix": "postcss --use autoprefixer --output css/website.css css/website.css",
-    "build-clean": "rm -rf css",
-    "build-sass": "node-sass --output-style expanded css/website.sass css/website.css",
+    "build-clean": "rm css/website.css",
+    "build-sass": "node-sass --output-style compressed css/website.sass css/website.css",
     "start": "npm run build-sass -- --watch"
   },
   "keywords": [
