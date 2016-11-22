@@ -1,0 +1,156 @@
+.example-value,
+.example-default,
+.example-recommended
+  background: $yellow
+  border-radius: 2px
+  color: $yellow-invert
+  display: inline-block
+  padding: 0.1em 0.5em 0.15em
+  vertical-align: top
+
+.example-value
+  cursor: pointer
+  position: relative
+
+.example-default,
+.example-recommended
+  background: #fff
+  float: right
+
+.example-default
+  box-shadow: inset 0 0 0 1px $red
+  color: $red
+
+.example-recommended
+  box-shadow: inset 0 0 0 1px $green
+  color: $green
+
+.example-fixed
+  display: flex
+  margin-top: 1rem
+  .button
+    background: $green
+    color: #fff
+    font-size: 0.8rem
+    &:before
+      content: "Enable position fixed"
+    &.is-enabled
+      background: $red
+      &:before
+        content: "Disabled position fixed"
+
+.example-description
+  font-size: 0.9rem
+  margin-top: 0.5rem
+  a
+    border-bottom: 1px solid $border
+    color: $text-strong
+    &:hover
+      border-bottom-color: $link
+  code
+    background: $background
+    border-radius: 2px
+    color: $text-strong
+    padding: 0.2em 0.4em
+  p,
+  pre,
+  ul
+    margin-bottom: 0.5em
+    &:last-child
+      margin-bottom: 0
+  ul
+    list-style-position: outside
+    list-style-type: disc
+    margin-left: 1.5em
+  pre
+    background: $background
+    color: $text-strong
+    font-size: 0.8em
+    line-height: 1.4
+    padding: 0.8em 1em
+  .shorthand
+    padding: 0
+    a
+      background: $background
+      border-radius: 2px
+      padding: 0.2em 0.4em
+      &:hover
+        background: $link
+        color: $link-invert
+
+.example-browser
+  align-items: center
+  background: $background
+  border: 1px solid $border
+  border-bottom: none
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  display: flex
+  height: 1rem
+  justify-content: flex-start
+  padding-left: 0.5rem
+  i
+    background: rgba(black, 0.2)
+    border-radius: 290486px
+    display: block
+    flex-grow: 0
+    flex-shrink: 0
+    height: 4px
+    margin-right: 2px
+    width: 4px
+
+.example-output
+  border: 1px solid $border
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+  box-shadow: 0 2px 3px rgba(#000, 0.05)
+  font-size: 0.8em
+  padding: 0.5em
+
+.example-output-div
+  padding: 0.8em 1em
+  position: relative
+
+.example-complements
+  background: $background
+  font-size: 0.9em
+  margin-bottom: -3rem
+  strong
+    font-weight: $weight-normal
+    padding-left: 0.35em
+  .shorthand
+    padding: 0
+    a
+      background: #fff
+      border-radius: 2px
+      padding: 0.2em 0.4em
+      &:hover
+        background: $link
+        color: $link-invert
+
++mobile
+  .example
+    padding: 2rem 1rem 0
+  .example-preview
+    margin-top: 1rem
+  .example-complements
+    margin-top: 2rem
+    padding: 2rem
+
++desktop
+  .example
+    align-items: flex-start
+    display: flex
+    padding: 2rem 3rem 0
+  .example-header,
+  .example-preview
+    flex-grow: 1
+    flex-shrink: 1
+  .example-header
+    padding-right: 2rem
+    width: 60%
+  .example-preview
+    width: 40%
+  .example-complements
+    margin-top: 3rem
+    padding: 2rem 3rem

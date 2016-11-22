@@ -1,0 +1,18 @@
+# Files
+
+.config.local.yml
+.DS_Store
+.jekyll-metadata
+.ruby-version
+npm-debug.log
+test.sass
+
+# Folders
+
+.idea/
+.sass-cache
+_gh_pages
+_site
+images/trash
+node_modules
+property

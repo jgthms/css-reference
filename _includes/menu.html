@@ -1,0 +1,49 @@
+<aside class="menu">
+  <header class="menu-header">
+    <a class="menu-logo" href="{{site.url}}">
+      <figure>
+        <img src="{{site.url}}/images/css-reference-icon.png" alt="CSS Reference icon">
+        <img src="{{site.url}}/images/css-reference-type.png" alt="CSS Reference type">
+      </figure>
+    </a>
+    <p class="menu-title">
+      {{site.description}}
+    </p>
+    <p class="menu-share">
+      <strong class="menu-share-label">Share</strong>
+      <a class="menu-share-button is-twitter"
+        data-social-network="Twitter"
+        data-social-action="tweet"
+        data-social-target="{{site.url}}{{page.url}}"
+        href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
+        rel="external nofollow"
+        target="_blank">
+        {% include svg/twitter.html %}
+      </a>
+      <a class="menu-share-button is-facebook"
+        href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
+        rel="external nofollow"
+        target="_blank">
+        {% include svg/facebook.html %}
+      </a>
+      <a id="menu-nav-open" class="menu-share-nav">Menu</a>
+    </p>
+  </header>
+  <nav id="menu-nav" class="menu-nav">
+    <form class="menu-search">
+      <input id="menu-search-input" type="search" name="CSSPropertySearch" placeholder="Search for a property">
+      <i class="icon is-search"></i>
+    </form>
+    <div id="menu-list" class="menu-list">
+      <ul id="menu-list-ul" class="menu-list-ul">
+        {% include lists/menu-list.html %}
+      </ul>
+      <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
+      <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+    </div>
+    <a id="menu-nav-close" class="menu-close">
+      <i class="icon is-close"></i>
+      <strong>Close</strong>
+    </a>
+  </nav>
+</aside>

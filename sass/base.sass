@@ -1,0 +1,65 @@
+html
+  background: #fff
+  font-size: 16px
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 300px
+  overflow-x: hidden
+  text-rendering: optimizeLegibility
+
+body
+  color: $text
+  font-family: $family-primary
+  font-size: 1rem
+  line-height: 1.6
+
+a,
+button,
+input,
+textarea
+  outline: none
+
+a
+  color: $link
+  cursor: pointer
+  text-decoration: none
+  transition-duration: $speed
+  transition-property: background, border-bottom-color, color
+
+code
+  font-family: $family-monospace
+  font-size: 0.8em
+
+img
+  max-height: 100%
+  max-width: 100%
+
+strong
+  color: $text-strong
+
+pre
+  white-space: pre
+  word-wrap: normal
+  code
+    font-size: 1em
+    padding: 0
+
+textarea
+  max-height: 100%
+  max-width: 100%
+
+html
+  \::-moz-selection
+    background: $primary
+    color: $primary-invert
+  \::selection
+    background: $primary
+    color: $primary-invert
+
+html.is-index
+  background: $plum
+
++desktop
+  html
+    font-size: 18px
+    padding-left: $menu-width

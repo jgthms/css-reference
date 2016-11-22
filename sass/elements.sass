@@ -1,0 +1,134 @@
+.box
+  border: 2px solid $text
+  border-radius: 3px
+  position: relative
+  &:before
+    background: $text
+    border-radius: 1px 0 2px 0
+    color: #fff
+    content: ""
+    display: inline-block
+    font-size: 0.8em
+    padding: 0 6px 2px 4px
+    vertical-align: top
+  &.is-red
+    border-color: $red
+    &:before
+      background: $red
+  &.is-green
+    border-color: $green
+    &:before
+      background: $green
+  &.is-plum
+    border-color: $plum
+    &:before
+      background: $plum
+
+.line
+  background: $text
+  height: 1px
+  position: relative
+  &:before
+    background: $text
+    border-radius: 2px
+    color: #fff
+    content: "Line"
+    display: inline-block
+    font-size: 10px
+    height: 15px
+    line-height: 15px
+    margin-top: -6px
+    padding: 0 4px
+    vertical-align: top
+  &.is-red
+    background: $red
+    &:before
+      background: $red
+
+.square
+  align-items: center
+  background: $border
+  border-radius: 3px
+  color: $text
+  display: flex
+  height: 75px
+  justify-content: center
+  line-height: 1.2
+  padding: 0
+  text-align: center
+  width: 75px
+  &.is-plum
+    background: $plum
+    color: $plum-invert
+    &:before
+      background: $plum
+  &.is-alpha
+    background: $alpha
+    color: $plum
+    &:before
+      background: $alpha
+  &.is-pink
+    background: $pink
+    color: #fff
+    &:before
+      background: $pink
+
+.block
+  background: $background
+  border-radius: 3px
+  color: $text
+  display: block
+  line-height: 1.2
+  padding: 1em
+  strong
+    color: inherit
+  &.is-alpha
+    background: $alpha
+    color: $plum
+  &.is-beta
+    background: $beta
+    color: $plum
+  &.is-pink
+    background: $pink
+    color: $plum
+  &.is-plum
+    background: $plum
+    color: #fff
+  &.is-yellow
+    background: $yellow
+    color: $plum
+  &.is-orange
+    background: $orange
+    color: $plum
+  &.is-green
+    background: $green
+    color: $plum
+  &.is-turquoise
+    background: $turquoise
+    color: $plum
+  &.is-blue
+    background: $blue
+    color: $plum
+  &.is-purple
+    background: $purple
+    color: $plum
+  &.is-red
+    background: $red
+    color: $plum
+
+.natural,
+.actual
+  +center
+  border-radius: 3px
+  line-height: 1.2
+  padding: 0.8em 1em
+
+.natural
+  border: 2px dotted $red
+  color: $red
+
+.actual
+  +center
+  background: $alpha
+  border: 2px solid $alpha
+  color: $plum

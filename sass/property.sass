@@ -1,0 +1,107 @@
+.list
+  background: #fff
+  box-shadow: $shadow
+  position: relative
+
+.property
+  background-image: linear-gradient($primary-light, #fff)
+  background-repeat: no-repeat
+  background-size: 100% 4rem
+  border-top: 2px solid $primary
+  padding-bottom: 3rem
+  padding-top: 2rem
+  &:first-child
+    border-top: none
+  &.is-shorthand
+    background-image: linear-gradient($purple-light, #fff)
+    border-top-color: $purple
+
+.property-links
+  float: right
+  font-size: 0.7rem
+  opacity: 0.5
+  padding: 0.25rem 0
+  transition-duration: $speed
+  transition-property: opacity
+  a
+    color: $text-light
+    margin-left: 1em
+    &:before
+      left: auto
+      right: 0
+      transform: translateX(0) translateY(0)
+      white-space: nowrap
+    &:hover
+      border-bottom: 1px solid
+      color: $link
+      &:before
+        transform: translateX(0) translateY(-4px)
+  &:hover
+    opacity: 1
+
+.property-name
+  font-size: 1.2rem
+  font-weight: $weight-bold
+  a
+    border-bottom: 1px solid transparent
+    color: $text-strong
+    display: inline-block
+    position: relative
+    vertical-align: top
+    span
+      color: $border
+      padding-right: 0.6em
+      position: absolute
+      right: 100%
+      top: 0
+    &:hover
+      border-bottom-color: $link
+      color: $link
+      span
+        color: $link
+
+.property-description
+  code
+    background: $background
+    border-radius: 2px
+    color: $text-strong
+    padding: 0.2em 0.4em
+  p + p
+    margin-top: 0.5em
+  .shorthand
+    padding: 0
+    a
+      background: $background
+      border-radius: 2px
+      padding: 0.2em 0.4em
+      &:hover
+        background: $link
+        color: $link-invert
+
+.property-animation
+  display: flex
+  margin-top: 1rem
+  .button
+    background: $green
+    color: #fff
+    font-size: 0.8rem
+    &:before
+      content: "▶ Play animations"
+    &:first-letter
+      margin-right: 0.25em
+    &.is-playing
+      background: $red
+      &:before
+        content: "￭ Stop"
+
++mobile
+  .property-header
+    padding-left: 2rem
+    padding-right: 2rem
+
++desktop
+  .list
+    margin-top: $header-height
+  .property-header
+    padding-left: 3rem
+    padding-right: 3rem

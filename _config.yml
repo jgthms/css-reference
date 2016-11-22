@@ -1,0 +1,7 @@
+title: CSS Reference
+description: A free visual guide to the most popular CSS properties.
+share: "CSS Reference: a free visual guide to the most popular CSS properties."
+url: http://cssreference.io
+markdown: kramdown
+permalink: pretty
+exclude: ['node_modules']

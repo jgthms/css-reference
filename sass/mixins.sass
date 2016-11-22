@@ -1,0 +1,26 @@
+=center
+  align-items: center
+  display: flex
+  justify-content: center
+  text-align: center
+
+=clearfix
+  &:after
+    clear: both
+    content: " "
+    display: table
+
+=overlay($offset: 0)
+  bottom: $offset
+  left: $offset
+  position: absolute
+  right: $offset
+  top: $offset
+
+=mobile
+  @media (max-width: 799px)
+    @content
+
+=desktop
+  @media (min-width: 800px)
+    @content

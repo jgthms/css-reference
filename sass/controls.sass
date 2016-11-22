@@ -1,0 +1,127 @@
+.input,
+.textarea,
+.button
+  -moz-appearance: none
+  -webkit-appearance: none
+  background: $background
+  border: none
+  font-size: 1em
+  line-height: 1.6
+  padding: 0.6em 1em
+
+.textarea
+  max-height: 100%
+  max-width: 100%
+  min-height: 6em
+
+.button
+  border-radius: 3px
+  box-shadow: 0 2px 2px rgba(#000, 0.2)
+  cursor: pointer
+  font-weight: $weight-bold
+  padding-left: 1.2em
+  padding-right: 1.2em
+  text-align: center
+  transition-duration: $speed
+  transition-property: background, box-shadow, color, transform
+  will-change: box-shadow
+  &:hover
+    box-shadow: 0 4px 8px rgba(#000, 0.2)
+    transform: translateY(-1px)
+  &:active
+    box-shadow: 0 0 0 rgba(#000, 0.01)
+    transform: translateY(0)
+
+.button.is-primary
+  background: $primary
+  color: $primary-invert
+  &:hover
+    background: darken($primary, 5%)
+  &:active
+    background: darken($primary, 10%)
+
+.button.is-facebook
+  background: $facebook
+  color: #fff
+  &:hover
+    background: darken($facebook, 5%)
+  &:active
+    background: darken($facebook, 10%)
+
+.button.is-twitter
+  background: $twitter
+  color: #fff
+  &:hover
+    background: darken($twitter, 5%)
+  &:active
+    background: darken($twitter, 10%)
+
+.icon
+  display: block
+  pointer-events: none
+  position: relative
+  transition-duration: $speed
+  transition-property: opacity
+
+.icon.is-back
+  height: 7px
+  transform: rotate(-45deg)
+  transform-origin: center center
+  width: 7px
+  &:before,
+  &:after
+    background: $plum-invert
+    border-radius: 4px
+    content: ""
+    display: block
+    transition-duration: $speed
+    transition-property: background
+  &:before
+    height: 2px
+  &:after
+    height: 7px
+    margin-top: -2px
+    width: 2px
+
+.icon.is-close
+  height: 14px
+  transform: rotate(45deg)
+  transform-origin: center center
+  width: 14px
+  &:before,
+  &:after
+    background: $text-strong
+    border-radius: 4px
+    content: ""
+    display: block
+    position: absolute
+  &:before
+    height: 4px
+    left: 0
+    margin-top: -2px
+    top: 50%
+    width: 14px
+  &:after
+    height: 14px
+    left: 50%
+    margin-left: -2px
+    top: 0
+    width: 4px
+
+.icon.is-search
+  border: 2px solid $text-light
+  border-radius: 290486px
+  height: 12px
+  transform: rotate(-45deg) translateX(4px) translateY(-5px)
+  transform-origin: center center
+  width: 12px
+  &:before
+    background: $text-light
+    border-radius: 290486px
+    content: ""
+    height: 7px
+    left: 50%
+    margin-left: -1px
+    position: absolute
+    top: 100%
+    width: 2px

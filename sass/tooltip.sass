@@ -1,0 +1,32 @@
+[data-tooltip]
+  position: relative
+
+[data-tooltip]:before
+  background-color: $text-strong
+  border-radius: 2px
+  bottom: 100%
+  color: #fff
+  content: attr(data-tooltip)
+  font-family: $family-primary
+  font-size: 0.6rem
+  left: 50%
+  line-height: 1.2
+  opacity: 0
+  padding: 0.5em 0.6em
+  pointer-events: none
+  position: absolute
+  text-align: center
+  transform: translateX(-50%) translateY(0)
+  transition-duration: $speed
+  transition-property: opacity, transform
+  visibility: hidden
+  white-space: nowrap
+
+[data-tooltip]:hover:before
+  opacity: 1
+  transform: translateX(-50%) translateY(-4px)
+  visibility: visible
+
+[data-tooltip].is-copied:before
+  background: $green
+  content: "Copied!"

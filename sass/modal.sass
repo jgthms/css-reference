@@ -1,0 +1,108 @@
+.modal
+  +overlay
+  align-items: center
+  background: rgba(#000, 0.7)
+  display: flex
+  justify-content: center
+  opacity: 0
+  padding: 1rem
+  position: fixed
+  transition-duration: $speed
+  transition-property: opacity, visibility
+  visibility: hidden
+
+.modal-box
+  background: #fff
+  flex-grow: 1
+  flex-shrink: 1
+  max-width: 46rem
+  opacity: 0
+  padding: 4rem 2rem
+  position: relative
+  transform: scale(0.95)
+  transform-origin: center center
+  transition-duration: $speed
+  transition-property: opacity, transform, visibility
+
+.modal-title
+  color: $text-strong
+  font-size: 2rem
+  font-weight: $weight-bold
+  line-height: 1
+  margin-bottom: 3rem
+  text-align: center
+
+.modal-close
+  background: $background
+  border-radius: 290486px
+  height: 3rem
+  position: absolute
+  right: 1rem
+  top: 1rem
+  transform: rotate(45deg)
+  transform-origin: center center
+  width: 3rem
+  &:before,
+  &:after
+    background: $text-light
+    content: ""
+    display: block
+    position: absolute
+  &:before
+    height: 50%
+    left: 50%
+    margin-left: -1px
+    top: 25%
+    width: 2px
+  &:after
+    height: 2px
+    left: 25%
+    margin-top: -1px
+    top: 50%
+    width: 50%
+  &:hover
+    background: darken($background, 5%)
+  &:active
+    background: darken($background, 10%)
+
+.modal.is-active
+  opacity: 1
+  visibility: visible
+  .modal-box
+    opacity: 1
+    transform: scale(1)
+    visibility: visible
+
++mobile
+  .modal-url
+    .input
+      display: block
+      width: 100%
+    .button
+      margin-top: 1em
+  .modal-social
+    .button
+      display: block
+      margin-top: 1em
+
++desktop
+  .modal-box
+    padding: 4rem 6rem
+  .modal-url
+    display: flex
+    .input
+      flex-grow: 1
+      flex-shrink: 1
+    .button
+      flex-grow: 0
+      flex-shrink: 0
+      margin-left: 1em
+      padding-left: 0
+      padding-right: 0
+      width: 5.5em
+  .modal-social
+    align-items: center
+    display: flex
+    margin-top: 1rem
+    .button
+      margin-right: 1em

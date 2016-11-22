@@ -1,0 +1,25 @@
+{
+  "name": "css-reference",
+  "version": "1.0.0",
+  "description": "A visual guide to the most popular CSS properties.",
+  "main": "css/website.sass",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --output css/website.css css/website.css",
+    "build-clean": "rm -rf css",
+    "build-sass": "node-sass --output-style expanded css/website.sass css/website.css",
+    "start": "npm run build-sass -- --watch"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "jekyll"
+  ],
+  "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "node-sass": "^3.11.3",
+    "postcss-cli": "^2.6.0"
+  }
+}
