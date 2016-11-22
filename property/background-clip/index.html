@@ -1,0 +1,93 @@
+---
+layout: single
+property_name: background-clip
+---
+
+<section id="background-clip" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/background-clip/" data-property-name="background-clip" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="background-clip">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/background-clip" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#background-clip"><span>#</span>background-clip</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines how far the background should <strong>extend</strong> within the element.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.background-clip { background: #05ffb0;border: 4px dashed;padding: 2em; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="background-clip: border-box;">background-clip: border-box;</code>
+        </p>
+        <div class="example-description">
+          <p>The background extends completely throughout the element, even <strong>under</strong> the border.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div background-clip " id="background-clip-border-box">Hello world</div>
+        </div>
+      </aside>
+          <style type="text/css">#background-clip-border-box{ background-clip:border-box;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="background-clip: padding-box;">background-clip: padding-box;</code>
+        </p>
+        <div class="example-description">
+          <p>The background only extends to the <em>edge</em> of the border: it includes the padding but <em>not</em> the border.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div background-clip " id="background-clip-padding-box">Hello world</div>
+        </div>
+      </aside>
+          <style type="text/css">#background-clip-padding-box{ background-clip:padding-box;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="background-clip: content-box;">background-clip: content-box;</code>
+        </p>
+        <div class="example-description">
+          <p>The background only extends to the edge of the <em>content</em>: it doesn&#39;t include the padding, nor the border.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div background-clip " id="background-clip-content-box">Hello world</div>
+        </div>
+      </aside>
+          <style type="text/css">#background-clip-content-box{ background-clip:content-box;}</style>
+    </section>
+
+</section>

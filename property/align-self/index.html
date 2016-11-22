@@ -1,0 +1,145 @@
+---
+layout: single
+property_name: align-self
+---
+
+<section id="align-self" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/align-self/" data-property-name="align-self" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="align-self">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-self" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#align-self"><span>#</span>align-self</a>
+    </h2>
+    <div class="property-description">
+      <p>Works like <code>align-items</code>, but applies only to a <strong>single</strong> flexbox item, instead of <em>all</em> of them.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.align-self { align-items: center;background: hsl(0, 0%, 95%);display: flex;height: 200px;justify-content: center;padding: 0; }</style>
+
+
+    <style type="text/css">.align-self .square { height: 50px;margin: 0 2px;width: calc(20% - 4px); }.align-self .square:nth-child(2) { background: #05ffb0;color: #310736; }.align-self .square:nth-child(4) { height: 75px; }.align-self .line { left: 2px;position: absolute;right: 2px; }.align-self .line.is-default { top: 50%; }.align-self .line.is-default:before { content: "Items"; }.align-self .line.is-red:before { content: "Self"; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: flex-start;">align-self: flex-start;</code>
+        </p>
+        <div class="example-description">
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: flex-start</code>, only the target will be at the start of the cross axis.</p>
+<p>By default, this means it will be aligned <strong>vertically</strong> at the <strong>top</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-flex-start"><p class="square is-plum">1</p><p class="square target">Target</p><p class="square is-plum">3</p><p class="square is-plum">4</p><p class="square is-plum">5</p><div class="line is-default"></div><div class="line is-red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-flex-start{ align-self:flex-start;}</style>
+        <style type="text/css">#align-self-flex-start .target { align-self: flex-start; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: flex-end;">align-self: flex-end;</code>
+        </p>
+        <div class="example-description">
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: flex-end</code>, only the target will be at the end of the cross axis.</p>
+<p>By default, this means it will be aligned <strong>vertically</strong> at the <strong>bottom</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-flex-end"><p class="square is-plum">1</p><p class="square target">Target</p><p class="square is-plum">3</p><p class="square is-plum">4</p><p class="square is-plum">5</p><div class="line is-default"></div><div class="line is-red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-flex-end{ align-self:flex-end;}</style>
+        <style type="text/css">#align-self-flex-end .line.is-red { bottom: 0; }#align-self-flex-end .target { align-self: flex-end; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: center;">align-self: center;</code>
+        </p>
+        <div class="example-description">
+          <p>If the container has <code>align-items: flex-start</code> and the <strong>target</strong> has <code>align-items: center</code>, only the target will be at the center of the cross axis.</p>
+<p>By default, this means it will be <strong>vertically centered</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-center"><p class="square is-plum">1</p><p class="square target">Target</p><p class="square is-plum">3</p><p class="square is-plum">4</p><p class="square is-plum">5</p><div class="line is-default"></div><div class="line is-red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-center{ align-self:center;}</style>
+        <style type="text/css">#align-self-center{ align-items: flex-start; }</style>
+        <style type="text/css">#align-self-center .line.is-default { top: 0; }#align-self-center .line.is-red { top: 50%; }#align-self-center .target { align-self: center; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: baseline;">align-self: baseline;</code>
+        </p>
+        <div class="example-description">
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: baseline</code>, only the target will be at the baseline of the cross axis.</p>
+<p>By default, this means it will be aligned along the basline of the text.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-baseline"><p class="square is-plum">1</p><p class="square target">Target</p><p class="square is-plum">3</p><p class="square is-plum">4</p><p class="square is-plum">5</p><div class="line is-default"></div><div class="line is-red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-baseline{ align-self:baseline;}</style>
+        <style type="text/css">#align-self-baseline .line.is-default { top: 50%; }#align-self-baseline .line.is-red { top: 30px; }#align-self-baseline .target { align-self: baseline; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: stretch;">align-self: stretch;</code>
+        </p>
+        <div class="example-description">
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: stretch</code>, only the target will stretch along the whole cross axis.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-stretch"><p class="square is-plum">1</p><p class="square target">Target</p><p class="square is-plum">3</p><p class="square is-plum">4</p><p class="square is-plum">5</p><div class="line is-default"></div><div class="line is-red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-stretch{ align-self:stretch;}</style>
+        <style type="text/css">#align-self-stretch .line.is-default { top: 50%; }#align-self-stretch .line.is-red { display: none; }#align-self-stretch .target { align-self: stretch;height: auto; }</style>
+    </section>
+
+</section>

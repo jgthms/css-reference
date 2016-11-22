@@ -1,0 +1,126 @@
+---
+layout: single
+property_name: position
+---
+
+<section id="position" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/position/" data-property-name="position" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="position">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/position" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#position"><span>#</span>position</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines the position behavior of the element.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.position { background: #310736;color: #fff;height: 200px;position: relative; }</style>
+
+
+    <style type="text/css">.position .block.is-alpha { margin-top: 1em; }.position .block.is-pink { position: absolute;right: 5px;top: 5px; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="position: static;">position: static;</code>
+        </p>
+        <div class="example-description">
+          <p>The element will remain in the <strong>natural flow</strong> of the page.</p>
+<p>As a result, it will <strong>not</strong> act as anchor point for the absolutely positioned yellow block.</p>
+<p>Also, it will <strong>not</strong> react to the following properties:</p>
+<ul><li><code>top</code></li><li><code>bottom</code></li><li><code>left</code></li><li><code>right</code></li><li><code>z-index</code></li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div position " id="position-static"><p>Ancestor container</p><div class="block is-alpha"><strong>Target element<br>position: static</strong><div class="block is-pink">Child element<br>position: absolute<br>right: 5px<br>top: 5px</div></div></div>
+        </div>
+      </aside>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="position: relative;">position: relative;</code>
+        </p>
+        <div class="example-description">
+          <p>The element will remain in the <strong>natural flow</strong> of the page.</p>
+<p>It also makes the element <strong>positioned</strong>: it will act as an anchor point for the absolutely positioned yellow block.</p>
+<p>Also, it will <strong>react</strong> to the following properties:</p>
+<ul><li><code>top</code></li><li><code>bottom</code></li><li><code>left</code></li><li><code>right</code></li><li><code>z-index</code></li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div position " id="position-relative"><p>Ancestor container</p><div class="block is-alpha"><strong>Target element<br>position: relative</strong><div class="block is-pink">Child element<br>position: absolute<br>right: 5px<br>top: 5px</div></div></div>
+        </div>
+      </aside>
+        <style type="text/css">#position-relative .block.is-alpha { position: relative; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="position: absolute;">position: absolute;</code>
+        </p>
+        <div class="example-description">
+          <p>The element will <strong>not</strong> remain in the natural flow of the page. It will position itself according to the <strong>closest positioned ancestor</strong>.</p>
+<p>Because it&#39;s <strong>positioned</strong>, it will act as an anchor point for the absolutely positioned yellow block.</p>
+<p>Also, it will <strong>react</strong> to the following properties:</p>
+<ul><li><code>top</code></li><li><code>bottom</code></li><li><code>left</code></li><li><code>right</code></li><li><code>z-index</code></li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div position " id="position-absolute"><p>Ancestor container</p><div class="block is-alpha"><strong>Target element<br>position: absolute<br>left: 0<br>top: 0</strong><div class="block is-pink">Child element<br>right: 5px<br>top: 5px</div></div></div>
+        </div>
+      </aside>
+        <style type="text/css">#position-absolute .block.is-alpha { left: 0;margin-top: 0;position: absolute;top: 0;width: 280px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="position: fixed;">position: fixed;</code>
+        </p>
+          <div class="example-fixed">
+            <a class="button example-fixed-toggle" data-slug="position-fixed"></a>
+          </div>
+        <div class="example-description">
+          <p>The element will <strong>not</strong> remain in the natural flow of the page. It will position itself according to the <strong>viewport</strong>.</p>
+<p>Because it&#39;s <strong>positioned</strong>, it will act as an anchor point for the absolutely positioned yellow block.</p>
+<p>Also, it will <strong>react</strong> to the following properties:</p>
+<ul><li><code>top</code></li><li><code>bottom</code></li><li><code>left</code></li><li><code>right</code></li><li><code>z-index</code></li></ul>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div position " id="position-fixed"><p>Ancestor container</p><div class="block is-alpha"><strong>Target element<br>position: fixed<br>left: 0<br>top: 0</strong><div class="block is-pink">Child element<br>position: absolute<br>right: 5px<br>top: 5px</div></div></div>
+        </div>
+      </aside>
+        <style type="text/css">#position-fixed.is-fixed .block.is-alpha { position: fixed;z-index: 10000; }</style>
+        <style type="text/css">#position-fixed .block.is-alpha { left: 0;margin-top: 0;position: absolute;top: 0;width: 280px; }</style>
+    </section>
+
+</section>
