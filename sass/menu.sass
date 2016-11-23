@@ -167,10 +167,64 @@
     margin-right: 0.25rem
     margin-top: 1px
 
+.menu-hello
+  background: #fff
+  min-height: 218px
+
+#huggingFace
+  background: #fff
+  color: $text-strong
+  display: none
+  font-size: 16px
+  line-height: 1.4
+  padding: 1.5rem
+  img
+    height: 24px
+    margin-top: -4px
+    vertical-align: middle
+    width: 24px
+  strong
+    position: relative
+    &:before
+      background: hsl(171, 100%, 81%)
+      bottom: 0
+      content: ""
+      height: 2px
+      left: 0
+      position: absolute
+      right: 0
+  p + p
+    margin-top: 0.5em
+
+#carbon
+  display: block
+  font-size: 14px
+  line-height: 1.2
+  min-height: 218px
+
+#carbonads
+  a,
+  img,
+  span
+    display: block
+    max-width: 240px
+  .carbon-wrap
+    a:first-child
+      height: calc(100px + 1rem)
+      padding: 1rem 1rem 0
+    a:last-child
+      padding: 0.5rem 1rem 0
+  .carbon-poweredby
+    color: $text-light
+    padding: 0.5rem 1rem 1rem
+  &:hover
+    .carbon-wrap a:last-child
+      text-decoration: underline
+
 +mobile
-  .menu-logo,
-  .menu-title
-    display: none
+  .menu-header
+    padding: 2rem
+    padding-bottom: 0
   .menu-share
     background: #fff
     bottom: 0
@@ -186,6 +240,14 @@
     position: fixed
     &.is-active
       display: flex
+  #huggingFace
+    padding: 2rem
+  #carbonads
+    .carbon-wrap a:first-child,
+    .carbon-wrap a:last-child,
+    .carbon-poweredby
+      padding-left: 2rem
+      padding-right: 2rem
 
 +desktop
   .menu
@@ -218,5 +280,9 @@
   .menu-list
     a
       padding: 0.5rem 2rem
+  .menu-hello
+    background: #fff
+    flex-grow: 0
+    flex-shrink: 0
   .menu-close
     display: none

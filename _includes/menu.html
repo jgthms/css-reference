@@ -1,3 +1,12 @@
+<script type="text/javascript">
+window.helloCarbon = function() {
+  var $huggingFace = document.getElementById('huggingFace');
+  var $carbon = document.getElementById('carbon');
+  $huggingFace.style.display = 'none';
+  $carbon.style.display = 'block';
+}
+</script>
+
 <aside class="menu">
   <header class="menu-header">
     <a id="logo" class="menu-logo" href="{{site.url}}">
@@ -46,4 +55,22 @@
       <strong>Close</strong>
     </a>
   </nav>
+  <footer class="menu-hello">
+    <div id="huggingFace">
+      <p>
+        CSS Reference is <strong>free</strong> and <br>
+        always will be!
+      </p>
+      <p>
+        Please whitelist us in <br>
+        your ad blocker.
+      </p>
+      <p>
+        Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
+      </p>
+    </div>
+    <div id="carbon">
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>
+    </div>
+  </footer>
 </aside>
