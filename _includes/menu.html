@@ -1,10 +1,24 @@
 <script type="text/javascript">
+window.carbonLoaded = false;
+
 window.helloCarbon = function() {
+  window.carbonLoaded = true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
   var $huggingFace = document.getElementById('huggingFace');
   var $carbon = document.getElementById('carbon');
-  $huggingFace.style.display = 'none';
-  $carbon.style.display = 'block';
-}
+
+  setTimeout(function() {
+    if (window.carbonLoaded) {
+      $huggingFace.style.display = 'none';
+      $carbon.style.display = 'block';
+    } else {
+      $huggingFace.style.display = 'block';
+      $carbon.style.display = 'none';
+    }
+  }, 5000);
+});
 </script>
 
 <aside class="menu">
