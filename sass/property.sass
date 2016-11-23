@@ -26,6 +26,7 @@
   transition-duration: $speed
   transition-property: opacity
   a
+    border-bottom: 1px solid transparent
     color: $text-light
     margin-left: 1em
     &:before
@@ -34,7 +35,7 @@
       transform: translateX(0) translateY(0)
       white-space: nowrap
     &:hover
-      border-bottom: 1px solid
+      border-bottom-color: $link
       color: $link
       &:before
         transform: translateX(0) translateY(-4px)

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   $searchInput.addEventListener('keyup', function(event) {
-    var query = this.value;
+    var query = this.value.toLowerCase();
     isFocused = (this === document.activeElement);
 
     if (isFocused) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     switch (key) {
     case 'Enter':
-      if (isSearching) {
+      if (isSearching && currentMatch > -1) {
         var propertyName = matches[currentMatch].propertyName;
 
         if (template === 'index') {
