@@ -8,10 +8,10 @@ $gradient-bottom: linear-gradient($primary, lighten($primary, 5%))
   background: $plum
   color: $plum-dark
   display: flex
-  justify-content: center
-  padding: 3rem 2rem
+  justify-content: flex-start
+  padding: 2rem
   position: relative
-  text-align: center
+  text-align: left
 
 $height: 96px
 $width: 486px
@@ -21,12 +21,11 @@ $width: 486px
   background-position: center center
   background-repeat: no-repeat
   background-size: $width $height
-  display: block
+  display: inline-block
   height: $height
-  margin-left: auto
-  margin-right: auto
   overflow: hidden
   text-indent: -290486px
+  vertical-align: top
   width: $width
   @media (max-width: 600px)
     background-size: ($width / 2) ($height / 2)
@@ -37,7 +36,8 @@ $width: 486px
   color: $plum-invert
   font-size: 1.4rem
   font-weight: $weight-bold
-  margin-top: 0.5rem
+  margin-bottom: 0.5rem
+  margin-top: 1rem
   text-shadow: 0 2px 4px rgba(#000, 0.1)
 
 .header-subtitle
@@ -74,9 +74,11 @@ $width: 486px
 +desktop
   .header
     height: $header-height
+    justify-content: center
     left: $menu-width
     min-height: 200px
     padding: 0 3rem
     position: fixed
     right: 0
+    text-align: center
     top: 0

@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Menu search
+  var $root = document.documentElement;
+  var template = $root.dataset.template;
+
+  // Menu: Search
   var $searchInput = document.getElementById('menu-search-input');
   var $menuList = document.getElementById('menu-list');
   var $menuItems = document.querySelectorAll('#menu-list li a');
@@ -59,16 +62,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   window.addEventListener('keydown', function(event) {
-    var key = event.key || false;
+    var key = event.code || event.key || false;
 
     switch (key) {
     case 'Enter':
       if (isSearching) {
-        event.preventDefault();
-        var $target = document.getElementById(matches[currentMatch].propertyName);
+        var propertyName = matches[currentMatch].propertyName;
 
-        if ($target) {
-          $target.scrollIntoView();
+        if (template === 'index') {
+          event.preventDefault();
+          var $target = document.getElementById(propertyName);
+
+          if ($target) {
+            $target.scrollIntoView();
+          }
+        } else {
+          window.location = window.location.origin + '/#' + propertyName;
         }
       }
       break;
@@ -108,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cleanMenu($menuItems, true, true);
   }
 
-  // Menu scroll
+  // Menu: Shadows
   var $menuUl = document.getElementById('menu-list-ul');
   var $menuShadowTop = document.getElementById('menu-shadow-top');
   var $menuShadowBottom = document.getElementById('menu-shadow-bottom');
@@ -148,7 +157,28 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   setMenuShadows();
 
-  // Copy to clipboard
+  // Menu: Mobile
+  var $menuNav = document.getElementById('menu-nav');
+  var $menuNavOpen = document.getElementById('menu-nav-open');
+  var $menuNavClose = document.getElementById('menu-nav-close');
+
+  $menuNavOpen.addEventListener('click', function(event) {
+    $menuNav.classList.add('is-active');
+  });
+
+  $menuNavClose.addEventListener('click', function(event) {
+    $menuNav.classList.remove('is-active');
+  });
+
+  Array.prototype.forEach.call($menuItems, function($menuItem, index) {
+    $menuItem.addEventListener('click', function(event) {
+      if (window.innerWidth < 800) {
+        $menuNav.classList.remove('is-active');
+      }
+    });
+  });
+
+  // Property: Copy to clipboard
   var clipboard = new Clipboard('.example-value');
 
   Array.prototype.forEach.call(document.querySelectorAll('.example-value'), function($el) {
@@ -162,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     e.trigger.classList.add('is-copied');
   });
 
-  // Share property
+  // Property: Share modal
   var $propertyShares = document.querySelectorAll('.property-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
@@ -233,20 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() { e.trigger.innerHTML = 'Copy'; }, 500);
   });
 
-  // Mobile menu
-  var $menuNav = document.getElementById('menu-nav');
-  var $menuNavOpen = document.getElementById('menu-nav-open');
-  var $menuNavClose = document.getElementById('menu-nav-close');
-
-  $menuNavOpen.addEventListener('click', function(event) {
-    $menuNav.classList.add('is-active');
-  });
-
-  $menuNavClose.addEventListener('click', function(event) {
-    $menuNav.classList.remove('is-active');
-  });
-
-  // Launch animations
+  // Property: Launch animations
   var $launchButtons = document.querySelectorAll('.property-animation-toggle');
 
   Array.prototype.forEach.call($launchButtons, function($launchButton, index) {
@@ -262,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Enable fixed
+  // Property: Enable fixed
   var $fixedButtons = document.querySelectorAll('.example-fixed-toggle');
 
   Array.prototype.forEach.call($fixedButtons, function($fixedButton, index) {

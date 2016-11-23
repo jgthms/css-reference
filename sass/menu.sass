@@ -2,10 +2,6 @@
   background: #fff
   position: relative
 
-.menu-header
-  padding: 2rem
-  padding-bottom: 1.5rem
-
 .menu-logo
   align-items: center
   display: flex
@@ -35,7 +31,6 @@
 .menu-share
   align-items: center
   display: flex
-  margin-top: 0.5rem
   position: relative
 
 .menu-share-label
@@ -72,8 +67,8 @@
 .menu-share-nav
   font-weight: $weight-bold
   position: absolute
-  right: 0
-  top: 0.5rem
+  right: 1rem
+  top: 1rem
 
 .menu-nav
   align-items: stretch
@@ -156,7 +151,8 @@
 
 .menu-close
   align-items: center
-  color: $text-strong
+  background: $link
+  color: $link-invert
   display: flex
   flex-grow: 0
   flex-shrink: 0
@@ -164,11 +160,24 @@
   justify-content: center
   padding: 1rem
   text-align: center
+  strong
+    color: $link-invert
   .icon
     margin-right: 0.25rem
-    margin-top: 2px
+    margin-top: 1px
 
 +mobile
+  .menu-logo,
+  .menu-title
+    display: none
+  .menu-share
+    background: #fff
+    bottom: 0
+    box-shadow: 0 0 1rem rgba(#000, 0.2)
+    left: 0
+    padding: 0.5rem 1rem
+    position: fixed
+    right: 0
   .menu-nav
     +overlay
     background: #fff
@@ -194,6 +203,10 @@
   .menu-header
     flex-grow: 0
     flex-shrink: 0
+    padding: 2rem
+    padding-bottom: 1.5rem
+  .menu-share
+    margin-top: 0.5rem
   .menu-share-nav
     display: none
   .menu-nav

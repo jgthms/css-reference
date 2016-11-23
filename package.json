@@ -9,7 +9,7 @@
     "build-clean": "rm css/website.css",
     "build-sass": "node-sass --output-style compressed css/website.sass css/website.css",
     "develop": "node-sass --output-style expanded css/website.sass css/website.css",
-    "start": "npm run build-sass -- --watch"
+    "start": "npm run develop -- --watch"
   },
   "keywords": [
     "css",
