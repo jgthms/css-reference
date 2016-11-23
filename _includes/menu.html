@@ -6,14 +6,17 @@ window.helloCarbon = function() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  var $menuHello = document.getElementById('menuHello');
   var $huggingFace = document.getElementById('huggingFace');
   var $carbon = document.getElementById('carbon');
 
   setTimeout(function() {
     if (window.carbonLoaded) {
+      $menuHello.style.minHeight = '218px';
       $huggingFace.style.display = 'none';
       $carbon.style.display = 'block';
     } else {
+      $menuHello.style.minHeight = '0';
       $huggingFace.style.display = 'block';
       $carbon.style.display = 'none';
     }
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <strong>Close</strong>
     </a>
   </nav>
-  <footer class="menu-hello">
+  <footer id="menuHello" class="menu-hello">
     <div id="huggingFace">
       <p>
         CSS Reference is <strong>free</strong> and <br>
