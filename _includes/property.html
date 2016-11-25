@@ -1,0 +1,47 @@
+<section id="{{property.title}}" class="property{% if property.is_shorthand %} is-shorthand{% endif %}">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/{{property.title}}/" data-property-name="{{property.title}}" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="{{property.title}}">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/{{property.title}}" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#{{property.title}}"><span>#</span>{{property.title}}</a>
+    </h2>
+    <div class="property-description">
+      {{property.description}}
+    </div>
+    <div class="property-animation">
+    {% for action in property.actions %}
+      {{action}}
+    {% endfor %}
+    </div>
+  </header>
+  <style type="text/css">
+    {% for style in property.styles %}
+      {{style}}
+    {% endfor %}
+  </style>
+  {% for example in property.examples %}
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+          {% if example.is_default %}<code class="example-default" data-tooltip="This is the property's default value">default</code>{% endif %}
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="{{example.title}}">{{example.title}}</code>
+        </p>
+        <div class="example-description">
+          {{example.description}}
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i>
+        </div>
+        <div class="example-output">
+          {{example.output}}
+        </div>
+      </aside>
+    </section>
+  {% endfor %}
+</section>

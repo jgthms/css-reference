@@ -33,7 +33,8 @@
         <strong>View in context</strong>
       </a>
       <section class="single">
-        {{content}}
+        {% assign property = page %}
+        {% include property.html %}
       </section>
     </main>
     {% include modals/share.html %}
