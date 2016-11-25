@@ -5,3 +5,8 @@ url: http://cssreference.io
 markdown: kramdown
 permalink: pretty
 exclude: ['node_modules']
+page_gen:
+  - data: properties
+    template: single
+    name: title
+    dir: property
