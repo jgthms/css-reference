@@ -1,3 +1,4 @@
+document.body.classList.add('has-js');
 document.addEventListener('DOMContentLoaded', function() {
   // Logo
   var $logo = document.getElementById('logo');
