@@ -14,9 +14,22 @@
   small
     font-size: 0.8em
     margin-left: 0.5em
-    a:hover
+  a
+    border-radius: 2px
+    margin-left: -4px
+    padding: 2px 4px
+    &:hover
       background: $alpha
       color: $alpha-invert
+
+.footer-facebook,
+.footer-github
+  align-items: center
+  display: none
+  flex-shrink: 0
+  justify-content: flex-end
+  iframe
+    height: 20px
 
 .footer-share
   align-items: center
@@ -78,6 +91,9 @@
     display: flex
     flex-grow: 1
     flex-shrink: 1
+  .footer-facebook,
+  .footer-github
+    display: flex
   .footer-share--contribute
     display: flex
     margin-right: 0.25rem
