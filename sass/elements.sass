@@ -11,23 +11,23 @@
     font-size: 0.8em
     padding: 0 6px 2px 4px
     vertical-align: top
-  &.is-red
-    border-color: $red
-    &:before
-      background: $red
-  &.is-green
-    border-color: $green
-    &:before
-      background: $green
-  &.is-plum
-    border-color: $plum
-    &:before
-      background: $plum
-  &.is-alpha
-    border-color: $alpha
-    &:before
-      background: $alpha
-      color: $alpha-invert
+.box--red
+  border-color: $red
+  &:before
+    background: $red
+.box--green
+  border-color: $green
+  &:before
+    background: $green
+.box--plum
+  border-color: $plum
+  &:before
+    background: $plum
+.box--alpha
+  border-color: $alpha
+  &:before
+    background: $alpha
+    color: $alpha-invert
 
 .line
   background: $text
@@ -45,10 +45,10 @@
     margin-top: -6px
     padding: 0 4px
     vertical-align: top
-  &.is-red
+.line--red
+  background: $red
+  &:before
     background: $red
-    &:before
-      background: $red
 
 .square
   align-items: center
@@ -62,21 +62,21 @@
   padding: 0
   text-align: center
   width: 75px
-  &.is-plum
+.square--plum
+  background: $plum
+  color: $plum-invert
+  &:before
     background: $plum
-    color: $plum-invert
-    &:before
-      background: $plum
-  &.is-alpha
+.square--alpha
+  background: $alpha
+  color: $plum
+  &:before
     background: $alpha
-    color: $plum
-    &:before
-      background: $alpha
-  &.is-pink
+.square--pink
+  background: $pink
+  color: #fff
+  &:before
     background: $pink
-    color: #fff
-    &:before
-      background: $pink
 
 .block
   background: $background
@@ -87,39 +87,39 @@
   padding: 1em
   strong
     color: inherit
-  &.is-alpha
-    background: $alpha
-    color: $plum
-  &.is-beta
-    background: $beta
-    color: $plum
-  &.is-pink
-    background: $pink
-    color: $plum
-  &.is-plum
-    background: $plum
-    color: #fff
-  &.is-yellow
-    background: $yellow
-    color: $plum
-  &.is-orange
-    background: $orange
-    color: $plum
-  &.is-green
-    background: $green
-    color: $plum
-  &.is-turquoise
-    background: $turquoise
-    color: $plum
-  &.is-blue
-    background: $blue
-    color: $plum
-  &.is-purple
-    background: $purple
-    color: $plum
-  &.is-red
-    background: $red
-    color: $plum
+.block--alpha
+  background: $alpha
+  color: $plum
+.block--beta
+  background: $beta
+  color: $plum
+.block--pink
+  background: $pink
+  color: $plum
+.block--plum
+  background: $plum
+  color: #fff
+.block--yellow
+  background: $yellow
+  color: $plum
+.block--orange
+  background: $orange
+  color: $plum
+.block--green
+  background: $green
+  color: $plum
+.block--turquoise
+  background: $turquoise
+  color: $plum
+.block--blue
+  background: $blue
+  color: $plum
+.block--purple
+  background: $purple
+  color: $plum
+.block--red
+  background: $red
+  color: $plum
 
 .natural,
 .actual

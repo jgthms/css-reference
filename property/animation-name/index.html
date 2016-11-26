@@ -1,114 +1,15 @@
----
-layout: single
-property_name: animation-name
----
-
-<section id="animation-name" class="property">
-  <header class="property-header">
-    <nav class="property-links">
-      <a class="property-links-direct" href="{{site.url}}/property/animation-name/" data-property-name="animation-name" data-tooltip="Single page for this property" target="_blank">Link</a>
-      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="animation-name">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/animation-name" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
-    <h2 class="property-name">
-      <a href="{{site.url}}/#animation-name"><span>#</span>animation-name</a>
-    </h2>
-    <div class="property-description">
-      <p>Defines <em>which</em> animation keyframes to use.</p>
-
-    </div>
-
-      <div class="property-animation">
-        <a class="button property-animation-toggle" data-property-name="animation-name"></a>
-      </div>
-  </header>
-
-    <style type="text/css">.animation-name { animation-iteration-count: infinite; }</style>
-
-    <style type="text/css">.animation-name.is-animated { animation-duration: 2s; }</style>
-
-
-
-    <section class="example">
-      <header class="example-header">
-        <p class="example-name">
-            <code class="example-default" data-tooltip="This is the property's default value">default</code>
-
-
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: none;">animation-name: none;</code>
-        </p>
-        <div class="example-description">
-          <p>If no animation name is specified, no animation is played.</p>
-
-        </div>
-      </header>
-
-      <aside class="example-preview">
-        <div class="example-browser"><i></i><i></i><i></i></div>
-        <div class="example-output">
-          <div class="example-output-div animation-name  square is-plum" id="animation-name-none">Hello<br>World</div>
-        </div>
-      </aside>
-          <style type="text/css">#animation-name-none{ animation-name:none;}</style>
-    </section>
-    <section class="example">
-      <header class="example-header">
-        <p class="example-name">
-
-
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: fadeIn;">animation-name: fadeIn;</code>
-        </p>
-        <div class="example-description">
-          <p>If a name is specified, the <strong>keyframes</strong> matching that name will be used.</p>
-<p>For example, the <code>fadeIn</code> animation looks like this:</p>
-<p><pre>@keyframes fadeIn {
+--- layout: single property_name: animation-name ---<section id="animation-name" class="property"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/animation-name/" data-property-name="animation-name" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="animation-name">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/animation-name" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#animation-name"><span>#</span>animation-name</a></h2><div class="property-description"><p>Defines <em>which</em> animation keyframes to use.</p></div><div class="property-animation"><a class="button property-animation-toggle" data-property-name="animation-name"></a></div></header><style type="text/css">.animation-name { animation-iteration-count: infinite; }</style><style type="text/css">.animation-name.is-animated { animation-duration: 2s; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: none;">animation-name: none;</code></p><div class="example-description"><p>If no animation name is specified, no animation is played.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div animation-name square square--plum" id="animation-name-none">Hello<br>World</div></div></aside><style type="text/css">#animation-name-none{ animation-name:none;}</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: fadeIn;">animation-name: fadeIn;</code></p><div class="example-description"><p>If a name is specified, the <strong>keyframes</strong> matching that name will be used.</p><p>For example, the <code>fadeIn</code> animation looks like this:</p><p><pre>@keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}</pre></p>
-
-        </div>
-      </header>
-
-      <aside class="example-preview">
-        <div class="example-browser"><i></i><i></i><i></i></div>
-        <div class="example-output">
-          <div class="example-output-div animation-name  square is-plum" id="animation-name-fadein">Hello<br>World</div>
-        </div>
-      </aside>
-          <style type="text/css">#animation-name-fadein{ animation-name:fadeIn;}</style>
-    </section>
-    <section class="example">
-      <header class="example-header">
-        <p class="example-name">
-
-
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: moveRight;">animation-name: moveRight;</code>
-        </p>
-        <div class="example-description">
-          <p>Another example: the <code>moveRight</code> animation:</p>
-<p><pre>@keyframes moveRight {
+}</pre></p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div animation-name square square--plum" id="animation-name-fadein">Hello<br>World</div></div></aside><style type="text/css">#animation-name-fadein{ animation-name:fadeIn;}</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-name: moveRight;">animation-name: moveRight;</code></p><div class="example-description"><p>Another example: the <code>moveRight</code> animation:</p><p><pre>@keyframes moveRight {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(100px);
   }
-}</pre></p>
-
-        </div>
-      </header>
-
-      <aside class="example-preview">
-        <div class="example-browser"><i></i><i></i><i></i></div>
-        <div class="example-output">
-          <div class="example-output-div animation-name  square is-plum" id="animation-name-moveright">Hello<br>World</div>
-        </div>
-      </aside>
-          <style type="text/css">#animation-name-moveright{ animation-name:moveRight;}</style>
-    </section>
-
-</section>
+}</pre></p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div animation-name square square--plum" id="animation-name-moveright">Hello<br>World</div></div></aside><style type="text/css">#animation-name-moveright{ animation-name:moveRight;}</style></section></section>
