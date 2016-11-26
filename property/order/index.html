@@ -1,1 +1,114 @@
---- layout: single property_name: order ---<section id="order" class="property"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/order/" data-property-name="order" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="order">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/order" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#order"><span>#</span>order</a></h2><div class="property-description"><p>Defines the order of a flexbox item.</p></div></header><style type="text/css">.order { display: flex; }</style><style type="text/css">.order .block { flex-grow: 1;flex-shrink: 1; }.order em { font-style: normal; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 0;">order: 0;</code></p><div class="example-description"><p>The order of the flexbox items is the one defined in the <strong>HTML code</strong>.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div order" id="order-0"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 0</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div></div></aside></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 1;">order: 1;</code></p><div class="example-description"><p>The order is <strong>relative</strong> to the flexbox item&#39;s <em>siblings</em>. The final order is defined when all individual flexbox item order values are taken into account.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div order" id="order-1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div></div></aside><style type="text/css">#order-1 .block--pink { order: 1; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: -1;">order: -1;</code></p><div class="example-description"><p>You can use <strong>negative</strong> values.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div order" id="order--1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: -1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div></div></aside><style type="text/css">#order--1 .block--pink { order: -1; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 9;">order: 9;</code></p><div class="example-description"><p>You can set a <strong>different</strong> value for each flexbox item.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div order" id="order-9"><p class="block block--alpha">One<br><em>order: 13</em></p><p class="block block--beta">Two<br><em>order: -7</em></p><p class="block block--pink"><strong>Target<br><em>order: 9</em></strong></p><p class="block block--yellow">Four<br><em>order: 5</em></p></div></div></aside><style type="text/css">#order-9 .block--alpha { order: 13; }#order-9 .block--beta { order: -7; }#order-9 .block--pink { order: 9; }#order-9 .block--yellow { order: 5; }</style></section></section>
+---
+layout: single
+property_name: order
+---
+
+<section id="order" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/order/" data-property-name="order" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="order">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/order" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#order"><span>#</span>order</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines the order of a flexbox item.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.order { display: flex; }</style>
+
+
+    <style type="text/css">.order .block { flex-grow: 1;flex-shrink: 1; }.order em { font-style: normal; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 0;">order: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>The order of the flexbox items is the one defined in the <strong>HTML code</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-0"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 0</strong></em></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 1;">order: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>The order is <strong>relative</strong> to the flexbox item&#39;s <em>siblings</em>. The final order is defined when all individual flexbox item order values are taken into account.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: 1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-1 .block--pink { order: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: -1;">order: -1;</code>
+        </p>
+        <div class="example-description">
+          <p>You can use <strong>negative</strong> values.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order--1"><p class="block block--alpha">One<br><em>order: 0</em></p><p class="block block--beta">Two<br><em>order: 0</em></p><p class="block block--pink"><strong>Target<br><em>order: -1</em></strong></p><p class="block block--yellow">Four<br><em>order: 0</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order--1 .block--pink { order: -1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="order: 9;">order: 9;</code>
+        </p>
+        <div class="example-description">
+          <p>You can set a <strong>different</strong> value for each flexbox item.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div order " id="order-9"><p class="block block--alpha">One<br><em>order: 13</em></p><p class="block block--beta">Two<br><em>order: -7</em></p><p class="block block--pink"><strong>Target<br><em>order: 9</em></strong></p><p class="block block--yellow">Four<br><em>order: 5</em></p></div>
+        </div>
+      </aside>
+        <style type="text/css">#order-9 .block--alpha { order: 13; }#order-9 .block--beta { order: -7; }#order-9 .block--pink { order: 9; }#order-9 .block--yellow { order: 5; }</style>
+    </section>
+
+</section>

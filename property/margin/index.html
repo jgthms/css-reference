@@ -1,1 +1,141 @@
---- layout: single property_name: margin ---<section id="margin" class="property property--shorthand"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/margin/" data-property-name="margin" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="margin">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/margin" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#margin"><span>#</span>margin</a></h2><div class="property-description"><p>Shorthand property for <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-top" data-property-name="margin-top">margin-top</a></code> <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-right" data-property-name="margin-right">margin-right</a></code> <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-bottom" data-property-name="margin-bottom">margin-bottom</a></code> and <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-left" data-property-name="margin-left">margin-left</a></code>.</p></div></header><style type="text/css">.margin { background: hsl(0, 0%, 80%);border: 1em solid hsl(0, 0%, 80%);padding: 0; }</style><style type="text/css">.margin .block { border-radius: 0; }.margin .square { align-items: center;border-radius: 0;display: flex;height: auto;justify-content: center;width: auto; }.margin .container { align-items: stretch;display: flex; }.margin .block--alpha { flex-grow: 1;flex-shrink: 1; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 0;">margin: 0;</code></p><div class="example-description"><p>Removes all margins.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div margin" id="margin-0"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target</strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div></div></aside><style type="text/css">#margin-0 .box { display: none; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px;">margin: 30px;</code></p><div class="example-description"><p>When using <strong>1</strong> value, the margin is set for <strong>all 4 sides</strong>.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div margin" id="margin-30px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target</strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div></div></aside><style type="text/css">#margin-30px .square--top { height: 30px; }#margin-30px .square--top:before { content: "30px"; }#margin-30px .square--bottom { height: 30px; }#margin-30px .square--bottom:before { content: "30px"; }#margin-30px .square--left:before { content: "30px";width: 30px; }#margin-30px .square--right:before { content: "30px";width: 30px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px;">margin: 30px 60px;</code></p><div class="example-description"><p>When using <strong>2</strong> values:</p><ul><li>the <strong>first</strong> value is for <strong>top/bottom</strong></li><li>the <strong>second</strong> value is for <strong>right/left</strong></li></ul><p>To remember the <strong>order</strong> think about the values you <strong>haven&#39;t defined</strong>.</p><p>If you enter <strong>2</strong> values (top/right), you <em>omit</em> setting bottom and left. Because bottom is the vertical counterpart of top, it will use top’s value. And because left is the horizontal counterpart of right, it will use right’s value.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div margin" id="margin-30px-60px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target</strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div></div></aside><style type="text/css">#margin-30px-60px .square--top { height: 30px; }#margin-30px-60px .square--top:before { content: "30px"; }#margin-30px-60px .square--bottom { height: 30px; }#margin-30px-60px .square--bottom:before { content: "30px"; }#margin-30px-60px .square--left:before { content: "60px";width: 60px; }#margin-30px-60px .square--right:before { content: "60px";width: 60px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px 45px;">margin: 30px 60px 45px;</code></p><div class="example-description"><p>When using <strong>3</strong> values:</p><ul><li>the <strong>first</strong> value is for <strong>top</strong></li><li>the <strong>second</strong> value is for <strong>right/left</strong></li><li>the <strong>third</strong> value is for <strong>bottom</strong></li></ul><p>To remember the <strong>order</strong> think about the values you <strong>haven&#39;t defined</strong>.</p><p>If you enter <strong>3</strong> values (top/right/bottom), you omit setting left. As right’s counterpart, it will use its value.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div margin" id="margin-30px-60px-45px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target</strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div></div></aside><style type="text/css">#margin-30px-60px-45px .square--top { height: 30px; }#margin-30px-60px-45px .square--top:before { content: "30px"; }#margin-30px-60px-45px .square--bottom { height: 45px; }#margin-30px-60px-45px .square--bottom:before { content: "45px"; }#margin-30px-60px-45px .square--left:before { content: "60px";width: 60px; }#margin-30px-60px-45px .square--right:before { content: "60px";width: 60px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px 45px 85px;">margin: 30px 60px 45px 85px;</code></p><div class="example-description"><p>When using <strong>4</strong> values:</p><ul><li>the <strong>first</strong> value is for <strong>top</strong></li><li>the <strong>second</strong> value is for <strong>right</strong></li><li>the <strong>third</strong> value is for <strong>bottom</strong></li><li>the <strong>fourth</strong> value is for <strong>left</strong></li></ul><p>To remember the <strong>order</strong>, start at the <strong>top</strong> and go <strong>clockwise</strong>.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div margin" id="margin-30px-60px-45px-85px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target</strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div></div></aside><style type="text/css">#margin-30px-60px-45px-85px .square--top { height: 30px; }#margin-30px-60px-45px-85px .square--top:before { content: "30px"; }#margin-30px-60px-45px-85px .square--bottom { height: 45px; }#margin-30px-60px-45px-85px .square--bottom:before { content: "45px"; }#margin-30px-60px-45px-85px .square--left:before { content: "85px";width: 85px; }#margin-30px-60px-45px-85px .square--right:before { content: "60px";width: 60px; }</style></section></section>
+---
+layout: single
+property_name: margin
+---
+
+<section id="margin" class="property property--shorthand">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/margin/" data-property-name="margin" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="margin">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/margin" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#margin"><span>#</span>margin</a>
+    </h2>
+    <div class="property-description">
+      <p>Shorthand property for <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-top" data-property-name="margin-top">margin-top</a></code> <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-right" data-property-name="margin-right">margin-right</a></code> <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-bottom" data-property-name="margin-bottom">margin-bottom</a></code>  and  <code class="shorthand"><a class="hash" href="{{site.url}}/#margin-left" data-property-name="margin-left">margin-left</a></code>.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.margin { background: hsl(0, 0%, 80%);border: 1em solid hsl(0, 0%, 80%);padding: 0; }</style>
+
+
+    <style type="text/css">.margin .block { border-radius: 0; }.margin .square { align-items: center;border-radius: 0;display: flex;height: auto;justify-content: center;width: auto; }.margin .container { align-items: stretch;display: flex; }.margin .block--alpha { flex-grow: 1;flex-shrink: 1; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 0;">margin: 0;</code>
+        </p>
+        <div class="example-description">
+          <p>Removes all margins.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div margin " id="margin-0"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target </strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#margin-0 .box { display: none; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px;">margin: 30px;</code>
+        </p>
+        <div class="example-description">
+          <p>When using <strong>1</strong> value, the margin is set for <strong>all 4 sides</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div margin " id="margin-30px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target </strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#margin-30px .square--top { height: 30px; }#margin-30px .square--top:before { content: "30px"; }#margin-30px .square--bottom { height: 30px; }#margin-30px .square--bottom:before { content: "30px"; }#margin-30px .square--left:before { content: "30px";width: 30px; }#margin-30px .square--right:before { content: "30px";width: 30px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px;">margin: 30px 60px;</code>
+        </p>
+        <div class="example-description">
+          <p>When using <strong>2</strong> values:</p>
+<ul><li>the <strong>first</strong> value is for <strong>top/bottom</strong></li><li>the <strong>second</strong> value is for <strong>right/left</strong></li></ul><p>To remember the <strong>order</strong> think about the values you <strong>haven&#39;t defined</strong>.</p>
+<p>If you enter <strong>2</strong> values (top/right), you <em>omit</em> setting bottom and left. Because bottom is the vertical counterpart of top, it will use top’s value. And because left is the horizontal counterpart of right, it will use right’s value.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div margin " id="margin-30px-60px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target </strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#margin-30px-60px .square--top { height: 30px; }#margin-30px-60px .square--top:before { content: "30px"; }#margin-30px-60px .square--bottom { height: 30px; }#margin-30px-60px .square--bottom:before { content: "30px"; }#margin-30px-60px .square--left:before { content: "60px";width: 60px; }#margin-30px-60px .square--right:before { content: "60px";width: 60px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px 45px;">margin: 30px 60px 45px;</code>
+        </p>
+        <div class="example-description">
+          <p>When using <strong>3</strong> values:</p>
+<ul><li>the <strong>first</strong> value is for <strong>top</strong></li><li>the <strong>second</strong> value is for <strong>right/left</strong></li><li>the <strong>third</strong> value is for <strong>bottom</strong></li></ul><p>To remember the <strong>order</strong> think about the values you <strong>haven&#39;t defined</strong>.</p>
+<p>If you enter <strong>3</strong> values (top/right/bottom), you omit setting left. As right’s counterpart, it will use its value.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div margin " id="margin-30px-60px-45px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target </strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#margin-30px-60px-45px .square--top { height: 30px; }#margin-30px-60px-45px .square--top:before { content: "30px"; }#margin-30px-60px-45px .square--bottom { height: 45px; }#margin-30px-60px-45px .square--bottom:before { content: "45px"; }#margin-30px-60px-45px .square--left:before { content: "60px";width: 60px; }#margin-30px-60px-45px .square--right:before { content: "60px";width: 60px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="margin: 30px 60px 45px 85px;">margin: 30px 60px 45px 85px;</code>
+        </p>
+        <div class="example-description">
+          <p>When using <strong>4</strong> values:</p>
+<ul><li>the <strong>first</strong> value is for <strong>top</strong></li><li>the <strong>second</strong> value is for <strong>right</strong></li><li>the <strong>third</strong> value is for <strong>bottom</strong></li><li>the <strong>fourth</strong> value is for <strong>left</strong></li></ul><p>To remember the <strong>order</strong>, start at the <strong>top</strong> and go <strong>clockwise</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div margin " id="margin-30px-60px-45px-85px"><div class="block block--pink">First item</div><div class="square square--top"></div><div class="container"><div class="square square--left"></div><div class="block block--alpha"><strong>Target </strong></div><div class="square square--right"></div></div><div class="square square--bottom"></div><div class="block block--yellow">Third item</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#margin-30px-60px-45px-85px .square--top { height: 30px; }#margin-30px-60px-45px-85px .square--top:before { content: "30px"; }#margin-30px-60px-45px-85px .square--bottom { height: 45px; }#margin-30px-60px-45px-85px .square--bottom:before { content: "45px"; }#margin-30px-60px-45px-85px .square--left:before { content: "85px";width: 85px; }#margin-30px-60px-45px-85px .square--right:before { content: "60px";width: 60px; }</style>
+    </section>
+
+</section>

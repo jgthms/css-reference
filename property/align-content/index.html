@@ -1,1 +1,163 @@
---- layout: single property_name: align-content ---<section id="align-content" class="property"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="align-content">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-content" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#align-content"><span>#</span>align-content</a></h2><div class="property-description"><p>Defines how each line is aligned within a flexbox container. It only applies if <code>flex-wrap: wrap</code> is present, and if there are <strong>multiple lines</strong> of flexbox items.</p></div></header><style type="text/css">.align-content { background: hsl(0, 0%, 95%);display: flex;flex-wrap: wrap;height: 300px;padding: 0; }</style><style type="text/css">.align-content .square { height: 46px;margin: 2px;width: 30%; }.align-content .square:nth-child(2) { height: 96px; }.align-content .box { height: 150px;left: 0;position: absolute;right: 0;top: 0; }.align-content .box--red:before { content: "First line"; }.align-content .box--green { top: 150px; }.align-content .box--green:before { content: "Second line"; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: stretch;">align-content: stretch;</code></p><div class="example-description"><p>Each line will stretch to <em>fill</em> the remaining space.</p><p>In this case, the container is <code>300px</code> high. All boxes are <code>50px</code> high, apart from the second one who is <code>100px</code> high.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-stretch"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-stretch{ align-content:stretch;}</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: flex-start;">align-content: flex-start;</code></p><div class="example-description"><p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>start</strong> of the flexbox container&#39;s cross axis.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-flex-start"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-flex-start{ align-content:flex-start;}</style><style type="text/css">#align-content-flex-start .box--red { height: 100px; }#align-content-flex-start .box--green { height: 50px;top: 100px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: flex-end;">align-content: flex-end;</code></p><div class="example-description"><p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>end</strong> of the flexbox container&#39;s cross axis.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-flex-end"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-flex-end{ align-content:flex-end;}</style><style type="text/css">#align-content-flex-end .box--red { height: 100px;top: 150px; }#align-content-flex-end .box--green { height: 50px;top: 250px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: center;">align-content: center;</code></p><div class="example-description"><p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>center</strong> of the flexbox container&#39;s cross axis.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-center"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-center{ align-content:center;}</style><style type="text/css">#align-content-center .box--red { height: 100px;top: 75px; }#align-content-center .box--green { height: 50px;top: 175px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: space-between;">align-content: space-between;</code></p><div class="example-description"><p>Each line will only fill the space it <em>needs</em>. The <em>remaining</em> space will appear <strong>between</strong> the lines.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-space-between"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-space-between{ align-content:space-between;}</style><style type="text/css">#align-content-space-between .box--red { height: 100px;top: 0; }#align-content-space-between .box--green { height: 50px;top: 250px; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: space-around;">align-content: space-around;</code></p><div class="example-description"><p>Each line will only fill the space it <em>needs</em>. The <em>remaining</em> space will be distributed equally <strong>around</strong> the lines: before the first line, between the two, and after the last one.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div align-content" id="align-content-space-around"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div></div></aside><style type="text/css">#align-content-space-around{ align-content:space-around;}</style><style type="text/css">#align-content-space-around .box--red { height: 100px;top: 38px; }#align-content-space-around .box--green { height: 50px;top: 213px; }</style></section></section>
+---
+layout: single
+property_name: align-content
+---
+
+<section id="align-content" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="align-content">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-content" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#align-content"><span>#</span>align-content</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines how each line is aligned within a flexbox container. It only applies if <code>flex-wrap: wrap</code> is present, and if there are <strong>multiple lines</strong> of flexbox items.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.align-content { background: hsl(0, 0%, 95%);display: flex;flex-wrap: wrap;height: 300px;padding: 0; }</style>
+
+
+    <style type="text/css">.align-content .square { height: 46px;margin: 2px;width: 30%; }.align-content .square:nth-child(2) { height: 96px; }.align-content .box { height: 150px;left: 0;position: absolute;right: 0;top: 0; }.align-content .box--red:before { content: "First line"; }.align-content .box--green { top: 150px; }.align-content .box--green:before { content: "Second line"; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: stretch;">align-content: stretch;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will stretch to <em>fill</em> the remaining space.</p>
+<p>In this case, the container is <code>300px</code> high. All boxes are <code>50px</code> high, apart from the second one who is <code>100px</code> high.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-stretch"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-stretch{ align-content:stretch;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: flex-start;">align-content: flex-start;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>start</strong> of the flexbox container&#39;s cross axis.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-flex-start"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-flex-start{ align-content:flex-start;}</style>
+        <style type="text/css">#align-content-flex-start .box--red { height: 100px; }#align-content-flex-start .box--green { height: 50px;top: 100px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: flex-end;">align-content: flex-end;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>end</strong> of the flexbox container&#39;s cross axis.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-flex-end"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-flex-end{ align-content:flex-end;}</style>
+        <style type="text/css">#align-content-flex-end .box--red { height: 100px;top: 150px; }#align-content-flex-end .box--green { height: 50px;top: 250px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: center;">align-content: center;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will only fill the space it <em>needs</em>. They will all move towards the <strong>center</strong> of the flexbox container&#39;s cross axis.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-center"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-center{ align-content:center;}</style>
+        <style type="text/css">#align-content-center .box--red { height: 100px;top: 75px; }#align-content-center .box--green { height: 50px;top: 175px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: space-between;">align-content: space-between;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will only fill the space it <em>needs</em>. The <em>remaining</em> space will appear <strong>between</strong> the lines.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-space-between"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-space-between{ align-content:space-between;}</style>
+        <style type="text/css">#align-content-space-between .box--red { height: 100px;top: 0; }#align-content-space-between .box--green { height: 50px;top: 250px; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-content: space-around;">align-content: space-around;</code>
+        </p>
+        <div class="example-description">
+          <p>Each line will only fill the space it <em>needs</em>. The <em>remaining</em> space will be distributed equally <strong>around</strong> the lines: before the first line, between the two, and after the last one.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-content " id="align-content-space-around"><p class="square square--plum">1</p><p class="square square--plum">2</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="box box--red"></div><div class="box box--green"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-content-space-around{ align-content:space-around;}</style>
+        <style type="text/css">#align-content-space-around .box--red { height: 100px;top: 38px; }#align-content-space-around .box--green { height: 50px;top: 213px; }</style>
+    </section>
+
+</section>

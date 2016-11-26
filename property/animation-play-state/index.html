@@ -1,4 +1,68 @@
---- layout: single property_name: animation-play-state ---<section id="animation-play-state" class="property"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/animation-play-state/" data-property-name="animation-play-state" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="animation-play-state">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/animation-play-state" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#animation-play-state"><span>#</span>animation-play-state</a></h2><div class="property-description"><p>Defines if an animation is playing or not.</p></div><div class="property-animation"><a class="button property-animation-toggle" data-property-name="animation-play-state"></a></div></header><style type="text/css">.animation-play-state { animation-duration: 2s;animation-iteration-count: infinite; }</style><style type="text/css">.animation-play-state.is-animated { animation-name: fadeAndMove; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-play-state: running;">animation-play-state: running;</code></p><div class="example-description"><p>If the <code>animation-duration</code> and <code>animation-name</code> are defined, the animation will start playing automatically.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div animation-play-state square square--plum" id="animation-play-state-running">Hello<br>World</div></div></aside><style type="text/css">#animation-play-state-running{ animation-play-state:running;}</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-play-state: paused;">animation-play-state: paused;</code></p><div class="example-description"><p>The animation is set paused at the <strong>first keyframe</strong>.</p><p>This is different than having either no <code>animation-duration</code> or <code>animation-name</code> at all. If the animation is paused, the style applied is that of the <em>first</em> keyframe, and <strong>not</strong> the default style.</p><p>In this example, the square is visible by default, but the on the first keyframe of <code>fadeAndMove</code>, the <code>opacity</code> is set to <code>0</code>. When paused, the animation will be &quot;stuck&quot; on this first keyframe, and will thus be invisible.</p><p><pre>@keyframes fadeAndMove {
+---
+layout: single
+property_name: animation-play-state
+---
+
+<section id="animation-play-state" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/animation-play-state/" data-property-name="animation-play-state" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="animation-play-state">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/animation-play-state" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#animation-play-state"><span>#</span>animation-play-state</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines if an animation is playing or not.</p>
+
+    </div>
+
+      <div class="property-animation">
+        <a class="button property-animation-toggle" data-property-name="animation-play-state"></a>
+      </div>
+  </header>
+
+    <style type="text/css">.animation-play-state { animation-duration: 2s;animation-iteration-count: infinite; }</style>
+
+    <style type="text/css">.animation-play-state.is-animated { animation-name: fadeAndMove; }</style>
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-play-state: running;">animation-play-state: running;</code>
+        </p>
+        <div class="example-description">
+          <p>If the <code>animation-duration</code> and <code>animation-name</code> are defined, the animation will start playing automatically.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div animation-play-state  square square--plum" id="animation-play-state-running">Hello<br>World</div>
+        </div>
+      </aside>
+          <style type="text/css">#animation-play-state-running{ animation-play-state:running;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="animation-play-state: paused;">animation-play-state: paused;</code>
+        </p>
+        <div class="example-description">
+          <p>The animation is set paused at the <strong>first keyframe</strong>.</p>
+<p>This is different than having either no <code>animation-duration</code> or <code>animation-name</code> at all. If the animation is paused, the style applied is that of the <em>first</em> keyframe, and <strong>not</strong> the default style.</p>
+<p>In this example, the square is visible by default, but the on the first keyframe of <code>fadeAndMove</code>, the <code>opacity</code> is set to <code>0</code>. When paused, the animation will be &quot;stuck&quot; on this first keyframe, and will thus be invisible.</p>
+<p><pre>@keyframes fadeAndMove {
   from {
     opacity: 0;
     transform: translateX(0);
@@ -7,4 +71,18 @@
     opacity: 0;
     transform: translateX(100px);
   }
-}</pre></p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div animation-play-state square square--plum" id="animation-play-state-paused">Hello<br>World</div></div></aside><style type="text/css">#animation-play-state-paused{ animation-play-state:paused;}</style></section></section>
+}</pre></p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div animation-play-state  square square--plum" id="animation-play-state-paused">Hello<br>World</div>
+        </div>
+      </aside>
+          <style type="text/css">#animation-play-state-paused{ animation-play-state:paused;}</style>
+    </section>
+
+</section>

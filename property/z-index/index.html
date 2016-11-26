@@ -1,1 +1,97 @@
---- layout: single property_name: z-index ---<section id="z-index" class="property"><header class="property-header"><nav class="property-links"><a class="property-links-direct" href="{{site.url}}/property/z-index/" data-property-name="z-index" data-tooltip="Single page for this property" target="_blank">Link</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="z-index">Share</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/z-index" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav><h2 class="property-name"><a href="{{site.url}}/#z-index"><span>#</span>z-index</a></h2><div class="property-description"><p>Defines the <strong>order</strong> of the elements on the <strong>z-axis*8. It only works on </strong>positioned** elements (anything apart from <code>static</code>).</p></div></header><style type="text/css">.z-index { height: 100px;padding: 0; }</style><style type="text/css">.z-index .block { height: 100%;left: 0;position: absolute;width: 25%; }.z-index .block--alpha { height: 50%;width: 100%; }.z-index .block--pink { height: 60%;left: 20%;top: 20%;width: 60%; }.z-index .block--beta { height: 60%;left: 40%;top: 40%;width: 60%; }.z-index .block--yellow { left: 70%;width: 20%; }</style><section class="example"><header class="example-header"><p class="example-name"><code class="example-default" data-tooltip="This is the property's default value">default</code> <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: auto;">z-index: auto;</code></p><div class="example-description"><p>The order is defined by the order in the <strong>HTML code</strong>:</p><ul><li>first in the code = behind</li><li>last in the code = in front</li></ul></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div z-index" id="z-index-auto"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div></div></aside></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: 1;">z-index: 1;</code></p><div class="example-description"><p>The z-index value is <strong>relative</strong> to the other ones. The target element is move in <strong>front</strong> of its siblings.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div z-index" id="z-index-1"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div></div></aside><style type="text/css">#z-index-1 .block--pink { z-index: 1; }</style></section><section class="example"><header class="example-header"><p class="example-name"><code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: -1;">z-index: -1;</code></p><div class="example-description"><p>You can use <strong>negative values</strong>. The target element is move in <strong>behind</strong> its siblings.</p></div></header><aside class="example-preview"><div class="example-browser"><i></i><i></i><i></i></div><div class="example-output"><div class="example-output-div z-index" id="z-index--1"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div></div></aside><style type="text/css">#z-index--1 .block--pink { z-index: -1; }</style></section></section>
+---
+layout: single
+property_name: z-index
+---
+
+<section id="z-index" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+      <a class="property-links-direct" href="{{site.url}}/property/z-index/" data-property-name="z-index" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="z-index">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/z-index" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="{{site.url}}/#z-index"><span>#</span>z-index</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines the <strong>order</strong> of the elements on the <strong>z-axis*8. It only works on </strong>positioned** elements (anything apart from <code>static</code>).</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.z-index { height: 100px;padding: 0; }</style>
+
+
+    <style type="text/css">.z-index .block { height: 100%;left: 0;position: absolute;width: 25%; }.z-index .block--alpha { height: 50%;width: 100%; }.z-index .block--pink { height: 60%;left: 20%;top: 20%;width: 60%; }.z-index .block--beta { height: 60%;left: 40%;top: 40%;width: 60%; }.z-index .block--yellow { left: 70%;width: 20%; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: auto;">z-index: auto;</code>
+        </p>
+        <div class="example-description">
+          <p>The order is defined by the order in the <strong>HTML code</strong>:</p>
+<ul>
+<li>first in the code = behind</li>
+<li>last in the code = in front</li>
+</ul>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div z-index " id="z-index-auto"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div>
+        </div>
+      </aside>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: 1;">z-index: 1;</code>
+        </p>
+        <div class="example-description">
+          <p>The z-index value is <strong>relative</strong> to the other ones. The target element is move in <strong>front</strong> of its siblings.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div z-index " id="z-index-1"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#z-index-1 .block--pink { z-index: 1; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="z-index: -1;">z-index: -1;</code>
+        </p>
+        <div class="example-description">
+          <p>You can use <strong>negative values</strong>. The target element is move in <strong>behind</strong> its siblings.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div z-index " id="z-index--1"><div class="block block--alpha">One</div><div class="block block--pink">Two<br><strong>Target</strong></div><div class="block block--beta">Three</div><div class="block block--yellow">Four</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#z-index--1 .block--pink { z-index: -1; }</style>
+    </section>
+
+</section>
