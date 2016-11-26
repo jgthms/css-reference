@@ -2,10 +2,13 @@
   background: #fff
   position: relative
 
+.menu-header
+  padding: 1.5rem
+
 .menu-logo
   align-items: center
   display: flex
-  justify-content: flex-start
+  justify-content: center
   figure
     align-items: center
     display: flex
@@ -25,6 +28,19 @@
   margin-left: 9px
   width: 160px
 
+.menu-collections
+  border-top: 1px solid $border
+  padding: 1rem
+  li
+    display: inline-block
+    vertical-align: top
+  a
+    border-radius: 2px
+    padding: 2px 4px
+    &:hover
+      background: $alpha
+      color: $alpha-invert
+
 .menu-nav
   align-items: stretch
   flex-direction: column
@@ -42,13 +58,13 @@
     display: block
     font-family: inherit
     font-size: 0.8rem
-    padding: 1.5em
-    padding-left: 3.5rem
+    padding: 1em
+    padding-left: 2.5rem
     width: 100%
     &:focus + .icon
       opacity: 1
   .icon
-    left: 2rem
+    left: 1rem
     opacity: 0.3
     pointer-events: none
     position: absolute
@@ -60,8 +76,7 @@
   flex-direction: column
   flex-grow: 1
   flex-shrink: 1
-  font-family: $family-monospace
-  font-size: 0.7rem
+  font-size: 0.8rem
   justify-content: flex-start
   overflow: hidden
   position: relative
@@ -180,8 +195,10 @@
       text-decoration: underline
 
 +mobile
-  .menu-header
-    display: none
+  .menu-collections
+    text-align: center
+    li
+      margin: 0.25rem
   .menu-nav
     +overlay
     background: #fff
@@ -215,7 +232,10 @@
   .menu-header
     flex-grow: 0
     flex-shrink: 0
-    padding: 2rem
+  .menu-collections
+    font-size: 0.8rem
+    li
+      margin-left: -2px
   .menu-nav
     border-top: 1px solid $border
     display: flex
@@ -223,7 +243,7 @@
     flex-shrink: 1
   .menu-list
     a
-      padding: 0.5rem 2rem
+      padding: 0.25rem 1rem
   .menu-hello
     background: #fff
     flex-grow: 0
