@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
   <nav class="menu-collections">
     <p><strong>Collections</strong></p>
     <ul>
-      <li><a class="menu-collection-link" href="{{site.url}}/animations/">Animations</a></li>
-      <li><a class="menu-collection-link" href="{{site.url}}/box-model/">Box model</a></li>
-      <li><a class="menu-collection-link" href="{{site.url}}/flexbox/">Flexbox</a></li>
-      <li><a class="menu-collection-link" href="{{site.url}}/positioning/">Positioning</a></li>
-      <li><a class="menu-collection-link" href="{{site.url}}/transitions/">Transitions</a></li>
-      <li><a class="menu-collection-link" href="{{site.url}}/typography/">Typography</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}" href="{{site.url}}/positioning/">Positioning</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}" href="{{site.url}}/transitions/">Transitions</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
     </ul>
   </nav>
   <nav id="menu-nav" class="menu-nav">
