@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <p class="menu-title">
       {{site.description}}<br>
-      <small>Created by <a href="https://twitter.com/jgthms">@jgthms</a></small>
+      <small>Created by <a href="https://twitter.com/jgthms" aria-label="Visit Twitter profile of jgthms">@jgthms</a></small>
     </p>
     <p class="menu-share">
       <strong class="menu-share-label">Share</strong>
@@ -44,11 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         data-social-target="{{site.url}}{{page.url}}"
         href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
         rel="external nofollow"
+        aria-label="Share via Twitter"
         target="_blank">
         {% include svg/twitter.html %}
       </a>
       <a class="menu-share-button is-facebook"
         href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
+        aria-label="Share via Facebook"
         rel="external nofollow"
         target="_blank">
         {% include svg/facebook.html %}
@@ -56,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <a id="menu-nav-open" class="menu-share-nav">Menu</a>
     </p>
   </header>
-  <nav id="menu-nav" class="menu-nav">
-    <div class="menu-search">
+  <nav id="menu-nav" class="menu-nav" role="menu">
+    <div class="menu-search" role="search">
       <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
       <i class="icon is-search"></i>
     </div>
