@@ -25,58 +25,6 @@
   margin-left: 9px
   width: 160px
 
-.menu-title
-  color: $text-light
-  margin-top: 1rem
-  padding-right: 1rem
-  small
-    font-size: 0.8em
-    a:hover
-      background: $alpha
-      color: $alpha-invert
-
-.menu-share
-  align-items: center
-  display: flex
-  position: relative
-
-.menu-share-label
-  margin-right: 0.5rem
-
-.menu-share-button
-  align-items: center
-  display: flex
-  height: 2.5rem
-  justify-content: center
-  position: relative
-  width: 2.5rem
-  &:before
-    +overlay
-    background: $background
-    border-radius: 5px
-    content: ""
-    display: block
-    height: 100%
-    opacity: 0
-    transform: scale(1.2)
-    transform-origin: center center
-    transition-duration: $speed
-    transition-property: opacity, transform
-    width: 100%
-  svg
-    height: 1rem
-    position: relative
-    width: auto
-  &:hover:before
-    opacity: 1
-    transform: scale(1)
-
-.menu-share-nav
-  font-weight: $weight-bold
-  position: absolute
-  right: 1rem
-  top: 1rem
-
 .menu-nav
   align-items: stretch
   flex-direction: column
@@ -233,16 +181,7 @@
 
 +mobile
   .menu-header
-    padding: 2rem
-    padding-bottom: 0
-  .menu-share
-    background: #fff
-    bottom: 0
-    box-shadow: 0 0 1rem rgba(#000, 0.2)
-    left: 0
-    padding: 0.5rem 1rem
-    position: fixed
-    right: 0
+    display: none
   .menu-nav
     +overlay
     background: #fff
@@ -277,11 +216,6 @@
     flex-grow: 0
     flex-shrink: 0
     padding: 2rem
-    padding-bottom: 1.5rem
-  .menu-share
-    margin-top: 0.5rem
-  .menu-share-nav
-    display: none
   .menu-nav
     border-top: 1px solid $border
     display: flex

@@ -8,7 +8,7 @@
     "build-autoprefix": "postcss --use autoprefixer --output css/website.css css/website.css",
     "build-clean": "rm css/website.css",
     "build-sass": "node-sass --output-style compressed css/website.sass css/website.css",
-    "develop": "node-sass --output-style expanded css/website.sass css/website.css",
+    "develop": "node-sass css/website.sass css/website.css",
     "start": "npm run develop -- --watch"
   },
   "keywords": [
