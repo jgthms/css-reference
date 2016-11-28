@@ -14,12 +14,6 @@ body
   font-size: 1rem
   line-height: 1.6
 
-a,
-button,
-input,
-textarea
-  outline: none
-
 a
   color: $link
   cursor: pointer
@@ -64,3 +58,10 @@ html.is-index
   html
     font-size: 18px
     padding-left: $menu-width
+
+[href="#main"]
+  position: absolute;
+  top: 0;
+  right: 100%;
+  &:focus
+    right: auto;

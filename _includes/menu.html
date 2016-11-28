@@ -44,8 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
       <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
     </ul>
   </nav>
-  <nav id="menu-nav" class="menu-nav">
-    <div class="menu-search">
+  <nav id="menu-nav" class="menu-nav" role="menu">
+    <div class="menu-search" role="search">
+      <label for="menu-search-input">Use search input to filter Menu items list:</label>
       <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
       <i class="icon is-search"></i>
     </div>
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="footer">
   <p class="footer-title">
-    <strong>{{site.description}}</strong> <small>Created by <a href="https://twitter.com/jgthms">@jgthms</a></small>
+    <strong>{{site.description}}</strong> <small>Created by <a href="https://twitter.com/jgthms" aria-label="Visit Twitter profile of jgthms">@jgthms</a></small>
   </p>
   <div class="footer-facebook">
     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <p class="footer-share footer-share--social">
     <strong class="footer-share-label">Share</strong>
     <a class="footer-share-button is-twitter"
+      aria-label="Share via Twitter"
       data-social-network="Twitter"
       data-social-action="tweet"
       data-social-target="{{site.url}}{{page.url}}"
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {% include svg/twitter.html %}
     </a>
     <a class="footer-share-button is-facebook"
+      aria-label="Share via Facebook"
       href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
       rel="external nofollow"
       target="_blank">

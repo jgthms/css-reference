@@ -2,6 +2,13 @@
 
 [![CSS Reference screenshot](https://raw.github.com/jgthms/css-reference/master/images/css-reference-share.png)](http://cssreference.io)
 
+# Development
+
+```shell
+$ npm install && npm start # Install JavaScript dependencies and run watcher.
+$ gem install jekyll && jekyll s -w # Install jekyll and generate static local site.
+```
+
 # License
 
 The content of this project itself is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
