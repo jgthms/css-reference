@@ -1,0 +1,101 @@
+.footer
+  background: #fff
+  bottom: 0
+  box-shadow: 0 0 1rem rgba(#000, 0.2)
+  left: 0
+  position: fixed
+  right: 0
+
+.footer-title
+  align-items: center
+  color: $text-light
+  display: none
+  padding: 0 1rem
+  small
+    font-size: 0.8em
+    margin-left: 0.5em
+  a
+    border-radius: 2px
+    margin-left: -4px
+    padding: 2px 4px
+    &:hover
+      background: $alpha
+      color: $alpha-invert
+
+.footer-facebook,
+.footer-github
+  align-items: center
+  display: none
+  flex-shrink: 0
+  justify-content: flex-end
+  iframe
+    height: 20px
+
+.footer-share
+  align-items: center
+  display: flex
+  position: relative
+
+.footer-share--contribute
+  display: none
+
+.footer-share-label
+  margin-right: 0.25rem
+
+.footer-share-button
+  align-items: center
+  display: flex
+  height: 2rem
+  justify-content: center
+  position: relative
+  width: 2rem
+  &:before
+    +overlay
+    background: $background
+    border-radius: 5px
+    content: ""
+    display: block
+    height: 100%
+    opacity: 0
+    transform: scale(1.2)
+    transform-origin: center center
+    transition-duration: $speed
+    transition-property: opacity, transform
+    width: 100%
+  svg
+    height: 1rem
+    position: relative
+    width: 1rem
+  &:hover:before
+    opacity: 1
+    transform: scale(1)
+
+.footer-share-nav
+  font-weight: $weight-bold
+  position: absolute
+  right: 1rem
+  top: 1rem
+
++mobile
+  .footer-share--social
+    padding: 0.5rem 1rem
+
++desktop
+  .footer
+    align-items: stretch
+    display: flex
+    font-size: 0.8rem
+    left: $menu-width
+    padding: 0.25rem
+  .footer-title
+    display: flex
+    flex-grow: 1
+    flex-shrink: 1
+  .footer-facebook,
+  .footer-github
+    display: flex
+  .footer-share--contribute
+    display: flex
+    margin-right: 0.25rem
+  .footer-share-nav
+    display: none

@@ -32,34 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
         <img class="menu-logo-type" src="{{site.url}}/images/css-reference-type.png" alt="CSS Reference type">
       </figure>
     </a>
-    <p class="menu-title">
-      {{site.description}}<br>
-      <small>Created by <a href="https://twitter.com/jgthms" aria-label="Visit Twitter profile of jgthms">@jgthms</a></small>
-    </p>
-    <p class="menu-share">
-      <strong class="menu-share-label">Share</strong>
-      <a class="menu-share-button is-twitter"
-        data-social-network="Twitter"
-        data-social-action="tweet"
-        data-social-target="{{site.url}}{{page.url}}"
-        href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
-        rel="external nofollow"
         aria-label="Share via Twitter"
-        target="_blank">
-        {% include svg/twitter.html %}
-      </a>
-      <a class="menu-share-button is-facebook"
-        href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
         aria-label="Share via Facebook"
-        rel="external nofollow"
-        target="_blank">
-        {% include svg/facebook.html %}
-      </a>
-      <a id="menu-nav-open" class="menu-share-nav">Menu</a>
-    </p>
   </header>
-  <nav id="menu-nav" class="menu-nav" role="menu">
+  <nav id="menu-nav" class="menu-collection" role="menu">
     <div class="menu-search" role="search">
+    <ul>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}" href="{{site.url}}/positioning/">Positioning</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}" href="{{site.url}}/transitions/">Transitions</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
+    </ul>
+  </nav>
       <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
       <i class="icon is-search"></i>
     </div>
@@ -94,3 +80,42 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </footer>
 </aside>
+
+<footer class="footer">
+  <p class="footer-title">
+    <strong>{{site.description}}</strong> <small>Created by <a href="https://twitter.com/jgthms" aria-label="Visit Twitter profile of jgthms">@jgthms</a></small>
+  </p>
+  <div class="footer-facebook">
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div>
+  <div class="footer-github">
+    <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+  </div>
+  <!-- <p class="footer-share footer-share--contribute">
+    <strong class="footer-share-label">Contribute</strong>
+    <a class="footer-share-button is-github" href="https://github.com/jgthms/css-reference" target="_blank">
+      {% include svg/github.html %}
+    </a>
+  </p> -->
+  <p class="footer-share footer-share--social">
+    <strong class="footer-share-label">Share</strong>
+    <a class="footer-share-button is-twitter"
+      aria-label="Share via Twitter"
+      data-social-network="Twitter"
+      data-social-action="tweet"
+      data-social-target="{{site.url}}{{page.url}}"
+      href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
+      rel="external nofollow"
+      target="_blank">
+      {% include svg/twitter.html %}
+    </a>
+    <a class="footer-share-button is-facebook"
+      aria-label="Share via Facebook"
+      href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
+      rel="external nofollow"
+      target="_blank">
+      {% include svg/facebook.html %}
+    </a>
+    <a id="menu-nav-open" class="footer-share-nav">Menu</a>
+  </p>
+</footer>

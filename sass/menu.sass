@@ -2,10 +2,13 @@
   background: #fff
   position: relative
 
+.menu-header
+  padding: 1.5rem
+
 .menu-logo
   align-items: center
   display: flex
-  justify-content: flex-start
+  justify-content: center
   figure
     align-items: center
     display: flex
@@ -25,57 +28,23 @@
   margin-left: 9px
   width: 160px
 
-.menu-title
-  color: $text-light
-  margin-top: 1rem
-  padding-right: 1rem
-  small
-    font-size: 0.8em
-    a:hover
-      background: $alpha
-      color: $alpha-invert
+.menu-collections
+  border-top: 1px solid $border
+  padding: 1rem
+  li
+    display: inline-block
+    vertical-align: top
 
-.menu-share
-  align-items: center
-  display: flex
-  position: relative
+.menu-collection-link
+  border-radius: 2px
+  padding: 2px 4px
+  &:hover
+    background: $alpha
+    color: $alpha-invert
 
-.menu-share-label
-  margin-right: 0.5rem
-
-.menu-share-button
-  align-items: center
-  display: flex
-  height: 2.5rem
-  justify-content: center
-  position: relative
-  width: 2.5rem
-  &:before
-    +overlay
-    background: $background
-    border-radius: 5px
-    content: ""
-    display: block
-    height: 100%
-    opacity: 0
-    transform: scale(1.2)
-    transform-origin: center center
-    transition-duration: $speed
-    transition-property: opacity, transform
-    width: 100%
-  svg
-    height: 1rem
-    position: relative
-    width: auto
-  &:hover:before
-    opacity: 1
-    transform: scale(1)
-
-.menu-share-nav
-  font-weight: $weight-bold
-  position: absolute
-  right: 1rem
-  top: 1rem
+.menu-collection-link--active
+  background: $alpha
+  color: $alpha-invert
 
 .menu-nav
   align-items: stretch
@@ -94,13 +63,13 @@
     display: block
     font-family: inherit
     font-size: 0.8rem
-    padding: 1.5em
-    padding-left: 3.5rem
+    padding: 1em
+    padding-left: 2.5rem
     width: 100%
     &:focus + .icon
       opacity: 1
   .icon
-    left: 2rem
+    left: 1rem
     opacity: 0.3
     pointer-events: none
     position: absolute
@@ -112,8 +81,7 @@
   flex-direction: column
   flex-grow: 1
   flex-shrink: 1
-  font-family: $family-monospace
-  font-size: 0.7rem
+  font-size: 0.8rem
   justify-content: flex-start
   overflow: hidden
   position: relative
@@ -236,17 +204,10 @@
       text-decoration: underline
 
 +mobile
-  .menu-header
-    padding: 2rem
-    padding-bottom: 0
-  .menu-share
-    background: #fff
-    bottom: 0
-    box-shadow: 0 0 1rem rgba(#000, 0.2)
-    left: 0
-    padding: 0.5rem 1rem
-    position: fixed
-    right: 0
+  .menu-collections
+    text-align: center
+    li
+      margin: 0.25rem
   .menu-nav
     +overlay
     background: #fff
@@ -280,12 +241,10 @@
   .menu-header
     flex-grow: 0
     flex-shrink: 0
-    padding: 2rem
-    padding-bottom: 1.5rem
-  .menu-share
-    margin-top: 0.5rem
-  .menu-share-nav
-    display: none
+  .menu-collections
+    font-size: 0.8rem
+    li
+      margin-left: -2px
   .menu-nav
     border-top: 1px solid $border
     display: flex
@@ -293,7 +252,7 @@
     flex-shrink: 1
   .menu-list
     a
-      padding: 0.5rem 2rem
+      padding: 0.25rem 1rem
   .menu-hello
     background: #fff
     flex-grow: 0
