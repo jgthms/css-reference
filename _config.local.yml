@@ -1,5 +1,6 @@
 title: CSS Reference
-description: A free visual guide to the most popular CSS properties.
+subtitle: "A free visual guide to the most popular CSS properties"
+description: "CSS Reference is a free visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples."
 share: "CSS Reference: a free visual guide to the most popular CSS properties."
 url: http://localhost:4000
 markdown: kramdown
