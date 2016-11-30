@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var $root = document.documentElement;
   var template = $root.dataset.template;
 
+  // Load iframes
+  var $footerIframes = document.querySelectorAll('.footer-iframe');
+
+  Array.prototype.forEach.call($footerIframes, function($iframe) {
+    var src = $iframe.dataset.src;
+    $iframe.src = src;
+  });
+
   // Menu: Search
   var $searchInput = document.getElementById('menu-search-input');
   var $menuList = document.getElementById('menu-list');
