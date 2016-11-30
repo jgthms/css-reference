@@ -3,7 +3,7 @@
   position: relative
 
 .menu-header
-  padding: 1.5rem
+  padding: 1.5rem 1.5rem 0
 
 .menu-logo
   align-items: center
@@ -29,15 +29,16 @@
   width: 160px
 
 .menu-collections
-  border-top: 1px solid $border
   padding: 1rem
-  li
-    display: inline-block
-    vertical-align: top
+  ul
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
 
 .menu-collection-link
   border-radius: 2px
-  padding: 2px 4px
+  display: block
+  padding: 0 6px
   &:hover
     background: $alpha
     color: $alpha-invert
@@ -201,6 +202,7 @@
 
 +mobile
   .menu-collections
+    justify-content: center
     text-align: center
     li
       margin: 0.25rem
@@ -239,8 +241,7 @@
     flex-shrink: 0
   .menu-collections
     font-size: 0.8rem
-    li
-      margin-left: -2px
+    padding-left: 1.5rem
   .menu-nav
     border-top: 1px solid $border
     display: flex

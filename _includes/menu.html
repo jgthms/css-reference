@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
   </header>
   <nav class="menu-collections">
-    <p><strong>Collections</strong></p>
     <ul>
+      <li><a class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}/">All</a></li>
       <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
       <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
       <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
