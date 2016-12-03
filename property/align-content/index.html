@@ -6,7 +6,7 @@ property_name: align-content
 <section id="align-content" class="property">
   <header class="property-header">
     <nav class="property-links">
-      <a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-links-direct" href="{{site.url}}/property/align-content/" data-property-name="align-content" data-tooltip="Single page for this property" target="_blank">Pop out</a>
       <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="align-content">Share</a>
       <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-content" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
     </nav>
@@ -37,6 +37,16 @@ property_name: align-content
         <div class="example-description">
           <p>Each line will stretch to <em>fill</em> the remaining space.</p>
 <p>In this case, the container is <code>300px</code> high. All boxes are <code>50px</code> high, apart from the second one who is <code>100px</code> high.</p>
+<ul>
+<li>The first line is <strong>100px</strong> high</li>
+<li>The second line is <strong>50px</strong> high</li>
+<li>The remaing space is <strong>150px</strong></li>
+</ul>
+<p>This remaining space is distributed equally amongst the two lines:</p>
+<ul>
+<li>The first line is now <strong>175px</strong> high</li>
+<li>The second line is now <strong>125px</strong> high</li>
+</ul>
 
         </div>
       </header>
@@ -48,6 +58,7 @@ property_name: align-content
         </div>
       </aside>
           <style type="text/css">#align-content-stretch{ align-content:stretch;}</style>
+        <style type="text/css">#align-content-stretch .box--red { height: 175px; }#align-content-stretch .box--green { height: 125px;top: 175px; }</style>
     </section>
     <section class="example">
       <header class="example-header">

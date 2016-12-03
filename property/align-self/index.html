@@ -6,7 +6,7 @@ property_name: align-self
 <section id="align-self" class="property">
   <header class="property-header">
     <nav class="property-links">
-      <a class="property-links-direct" href="{{site.url}}/property/align-self/" data-property-name="align-self" data-tooltip="Single page for this property" target="_blank">Link</a>
+      <a class="property-links-direct" href="{{site.url}}/property/align-self/" data-property-name="align-self" data-tooltip="Single page for this property" target="_blank">Pop out</a>
       <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="align-self">Share</a>
       <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/align-self" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
     </nav>
@@ -29,12 +29,35 @@ property_name: align-self
     <section class="example">
       <header class="example-header">
         <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: auto;">align-self: auto;</code>
+        </p>
+        <div class="example-description">
+          <p>The target will use the value of <code>align-items</code>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div align-self " id="align-self-auto"><p class="square square--plum">1</p><p class="square target">Target</p><p class="square square--plum">3</p><p class="square square--plum">4</p><p class="square square--plum">5</p><div class="line line--default"></div><div class="line line--red"></div></div>
+        </div>
+      </aside>
+          <style type="text/css">#align-self-auto{ align-self:auto;}</style>
+        <style type="text/css">#align-self-auto .target { align-self: auto; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
 
 
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: flex-start;">align-self: flex-start;</code>
         </p>
         <div class="example-description">
-          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: flex-start</code>, only the target will be at the start of the cross axis.</p>
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-self: flex-start</code>, only the target will be at the start of the cross axis.</p>
 <p>By default, this means it will be aligned <strong>vertically</strong> at the <strong>top</strong>.</p>
 
         </div>
@@ -57,7 +80,7 @@ property_name: align-self
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: flex-end;">align-self: flex-end;</code>
         </p>
         <div class="example-description">
-          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: flex-end</code>, only the target will be at the end of the cross axis.</p>
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-self: flex-end</code>, only the target will be at the end of the cross axis.</p>
 <p>By default, this means it will be aligned <strong>vertically</strong> at the <strong>bottom</strong>.</p>
 
         </div>
@@ -80,7 +103,7 @@ property_name: align-self
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: center;">align-self: center;</code>
         </p>
         <div class="example-description">
-          <p>If the container has <code>align-items: flex-start</code> and the <strong>target</strong> has <code>align-items: center</code>, only the target will be at the center of the cross axis.</p>
+          <p>If the container has <code>align-items: flex-start</code> and the <strong>target</strong> has <code>align-self: center</code>, only the target will be at the center of the cross axis.</p>
 <p>By default, this means it will be <strong>vertically centered</strong>.</p>
 
         </div>
@@ -104,7 +127,7 @@ property_name: align-self
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: baseline;">align-self: baseline;</code>
         </p>
         <div class="example-description">
-          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: baseline</code>, only the target will be at the baseline of the cross axis.</p>
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-self: baseline</code>, only the target will be at the baseline of the cross axis.</p>
 <p>By default, this means it will be aligned along the basline of the text.</p>
 
         </div>
@@ -127,7 +150,7 @@ property_name: align-self
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="align-self: stretch;">align-self: stretch;</code>
         </p>
         <div class="example-description">
-          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-items: stretch</code>, only the target will stretch along the whole cross axis.</p>
+          <p>If the container has <code>align-items: center</code> and the <strong>target</strong> has <code>align-self: stretch</code>, only the target will stretch along the whole cross axis.</p>
 
         </div>
       </header>
