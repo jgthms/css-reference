@@ -9,3 +9,70 @@
   strong
     color: $plum-invert
     font-weight: $weight-bold
+
+.heading-share
+  align-items: center
+  position: relative
+
+.heading-share-label
+  color: $plum-light
+  font-size: 0.8em
+  margin-right: 0.5rem
+
+.heading-share-button
+  align-items: center
+  display: inline-flex
+  height: 3rem
+  justify-content: center
+  position: relative
+  width: 3rem
+  &:before
+    +overlay
+    background: $plum-dark
+    border-radius: 5px
+    content: ""
+    display: block
+    height: 100%
+    opacity: 0
+    transform: scale(1.2)
+    transform-origin: center center
+    transition-duration: $speed
+    transition-property: opacity, transform
+    width: 100%
+  svg
+    height: 1.5rem
+    position: relative
+    width: 1.5rem
+  &:hover:before
+    opacity: 1
+    transform: scale(1)
+
++mobile
+  .heading-share
+    margin-top: 2rem
+
++until(1199px)
+  .heading-share
+    min-width: 8rem
+    text-align: center
+  .heading-share-label
+    display: block
+    margin-bottom: 0.5rem
+  .heading-share-button
+    vertical-align: top
+
++desktop
+  .heading
+    align-items: center
+    display: flex
+  .heading-content
+    flex-grow: 1
+    flex-shrink: 1
+
++from(1200px)
+  .heading-share
+    display: flex
+  .heading-share-label
+    margin-right: 0.5rem
+  .heading-share-button
+    display: flex

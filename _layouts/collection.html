@@ -30,10 +30,30 @@
     {% include menu.html %}
     <main class="main">
       <header class="heading">
-        <h1 class="heading-title">
-          <strong>{{page.collection_name}}</strong> in CSS
-        </h1>
-        <p class="heading-description">The CSS properties that allow you to {{page.description}}</p>
+        <div class="heading-content">
+          <h1 class="heading-title">
+            <strong>{{page.collection_name}}</strong> in CSS
+          </h1>
+          <p class="heading-description">The CSS properties that allow you to {{page.description}}</p>
+        </div>
+        <p class="heading-share">
+          <strong class="heading-share-label">Share this page</strong>
+          <a class="heading-share-button is-twitter"
+            data-social-network="Twitter"
+            data-social-action="tweet"
+            data-social-target="{{site.url}}{{page.url}}"
+            href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}{{page.url | url_encode}}&text={{page.collection_name | prepend: 'Learn how ' | append: ' works in CSS' | url_encode}}"
+            rel="external nofollow"
+            target="_blank">
+            {% include svg/twitter.html %}
+          </a>
+          <a class="heading-share-button is-facebook"
+            href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}{{page.url | url_encode}}"
+            rel="external nofollow"
+            target="_blank">
+            {% include svg/facebook.html %}
+          </a>
+        </p>
       </header>
       <section class="list">
         {{content}}

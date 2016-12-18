@@ -25,6 +25,10 @@
   @media (min-width: 800px)
     @content
 
+=until($bp)
+  @media (max-width: $bp)
+    @content
+
 =from($bp)
   @media (min-width: $bp)
     @content
