@@ -51,7 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <div id="menu-list" class="menu-list">
       <ul id="menu-list-ul" class="menu-list-ul">
-        {% include lists/menu-list.html %}
+        {% if page.menu_list && page.layout == "collection" %}
+          {% include collections/{{page.menu_list}}.html %}
+        {% else %}
+          {% include lists/menu-list.html %}
+        {% endif %}
       </ul>
       <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
       <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
