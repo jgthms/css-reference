@@ -10,6 +10,7 @@
   align-items: center
   color: $text-light
   display: none
+  line-height: 1.2
   padding: 0 1rem
   small
     font-size: 0.8em
@@ -71,10 +72,14 @@
     transform: scale(1)
 
 .footer-share-nav
+  align-items: center
+  bottom: 0
+  display: flex
   font-weight: $weight-bold
+  padding: 0 1rem
   position: absolute
-  right: 1rem
-  top: 1rem
+  right: 0
+  top: 0
 
 +mobile
   .footer-share--social
@@ -85,13 +90,14 @@
     align-items: stretch
     display: flex
     font-size: 0.8rem
+    height: 3rem
     left: $menu-width
-  .footer-title,
   .footer-share,
   .footer-facebook,
   .footer-github
     display: flex
   .footer-title
+    display: none
     padding: 0.25rem 1rem
   .footer-share
     border-left: 1px solid $border
@@ -100,3 +106,7 @@
     padding: 0.25rem 1rem
   .footer-share-nav
     display: none
+
++from(1000px)
+  .footer-title
+    display: flex

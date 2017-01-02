@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Menu: Search
   var $searchInput = document.getElementById('menu-search-input');
   var $menuList = document.getElementById('menu-list');
-  var $menuItems = document.querySelectorAll('#menu-list li a');
+  var $menuItems = document.querySelectorAll('.menu-item');
   var isFocused = false;
   var isSearching = false;
   var isModaling = false;
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var matches = initializeMatches($menuItems);
 
   $searchInput.addEventListener('focus', function(event) {
+    isFocused = true;
     isSearching = true;
   });
 
@@ -56,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         $menuList.classList.remove('is-searching');
         Array.prototype.forEach.call($menuItems, function($el) {
-          $el.innerHTML = $el.dataset.propertyName;
+          var $elName = $el.querySelector('.menu-item-name');
+          $elName.innerHTML = $el.dataset.propertyName;
         });
       }
     }
@@ -75,17 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
     switch (key) {
     case 'Enter':
       if (isSearching && currentMatch > -1) {
+        event.preventDefault();
         var propertyName = matches[currentMatch].propertyName;
+        var $target = document.getElementById(propertyName);
 
-        if (template === 'index') {
-          event.preventDefault();
-          var $target = document.getElementById(propertyName);
-
-          if ($target) {
-            $target.scrollIntoView();
-          }
+        if ($target) {
+          $target.scrollIntoView();
         } else {
-          window.location = window.location.origin + '/#' + propertyName;
+          window.location = window.location.origin + '/property/' + propertyName;
         }
       }
       break;
@@ -211,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Array.prototype.forEach.call($propertyShares, function($el, index) {
     $el.addEventListener('click', function(e) {
       var propertyName = $el.dataset.propertyName;
-      var shareURL = baseURL + '#' + propertyName;
+      var shareURL = baseURL + 'property/' + propertyName;
       $modalInput.value = shareURL;
       encodedURL = encodeURIComponent(shareURL);
       facebookURL = 'https://www.facebook.com/sharer.php?u=' + encodedURL;
@@ -299,6 +298,24 @@ document.addEventListener('DOMContentLoaded', function() {
       $target.classList.toggle('is-fixed');
     });
   });
+
+  // Hashes
+  var $hashes = document.querySelectorAll('.hash, .menu-list-ul li a');
+
+  Array.prototype.forEach.call($hashes, function($el) {
+    $el.addEventListener('click', function(event) {
+      event.preventDefault();
+      var propertyName = $el.dataset.propertyName;
+      var $target = document.getElementById($el.dataset.propertyName);
+
+      if ($target) {
+        $target.scrollIntoView();
+        history.replaceState('', document.title, '#' + propertyName);
+      } else {
+        window.location = window.location.origin + '/property/' + propertyName;
+      }
+    });
+  });
 });
 
 // Pure functions
@@ -318,8 +335,9 @@ function initializeMatches($menuItems) {
 
 function cleanMenu($menuItems, highlight, selection) {
   Array.prototype.forEach.call($menuItems, function($el, index) {
+    var $elName = $el.querySelector('.menu-item-name');
     if (highlight) {
-      $el.innerHTML = $el.dataset.propertyName;
+      $elName.innerHTML = $el.dataset.propertyName;
       $el.classList.remove('is-highlighted');
     }
     if (selection) {
@@ -350,16 +368,17 @@ function navigateMenu($menuItems, matches, currentIndex, increment = true) {
 
 function highlightQuery($el, propertyName, query) {
   var queryIndex = propertyName.indexOf(query);
+  var $elName = $el.querySelector('.menu-item-name');
 
   if (queryIndex >= 0) {
     var before = propertyName.substring(0, queryIndex);
     var highlight = '<span class="highlight">' + propertyName.substring(queryIndex, queryIndex + query.length) + '</span>';
     var after = propertyName.substring(queryIndex + query.length);
-    $el.innerHTML = before + highlight + after;
+    $elName.innerHTML = before + highlight + after;
     $el.classList.add('is-highlighted');
     return true;
   } else {
-    $el.innerHTML = propertyName;
+    $elName.innerHTML = propertyName;
     $el.classList.remove('is-highlighted');
     return false;
   }

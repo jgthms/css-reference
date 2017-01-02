@@ -3,7 +3,7 @@
   position: relative
 
 .menu-header
-  padding: 1.5rem 1.5rem 0
+  padding: 1rem 1rem 0
 
 .menu-logo
   align-items: center
@@ -90,23 +90,27 @@
     -webkit-overflow-scrolling: touch
     flex-grow: 1
     overflow: auto
-  a
+  .menu-link
     display: block
     padding: 0.75rem 2rem
     transition: none
-    .highlight
-      background: $yellow
-      color: $yellow-invert
-    &:hover,
-    &.is-selected
-      background: $alpha
-      color: $alpha-invert
   &.is-searching
-    a
+    .menu-item
       display: none
       &.is-highlighted,
       &.is-selected,
         display: block
+
+.menu-item
+  .highlight
+    background: $yellow
+    color: $yellow-invert
+  &:hover,
+  &.is-selected
+    background: $alpha
+    color: $alpha-invert
+    .menu-item-name
+      color: $alpha-invert
 
 .menu-list-shadow
   display: block
@@ -176,7 +180,7 @@
     margin-bottom: 0.5em
 
 #carbon
-  display: block
+  display: none
   font-size: 14px
   line-height: 1.2
   min-height: 218px
@@ -199,6 +203,35 @@
   &:hover
     .carbon-wrap a:last-child
       text-decoration: underline
+
+#placeholder
+  display: block
+  font-size: 14px
+  line-height: 1.2
+
+.placeholder-image
+  height: calc(100px + 1rem)
+  padding: 1rem 1rem 0
+  div
+    background: $background
+    height: 100px
+    width: 150px
+
+.placeholder-content
+  padding: 0.5rem 1rem 0
+  div
+    background: $background
+    height: 1em
+    margin-bottom: 0.2em
+    &:last-child
+      width: 30%
+
+.placeholder-footer
+  padding: 0.5rem 1rem 1rem
+  div
+    background: $background
+    height: 1em
+    width: 40%
 
 +mobile
   .menu-collections
@@ -241,15 +274,14 @@
     flex-shrink: 0
   .menu-collections
     font-size: 0.8rem
-    padding-left: 1.5rem
+    padding-left: 1rem
   .menu-nav
     border-top: 1px solid $border
     display: flex
     flex-grow: 1
     flex-shrink: 1
-  .menu-list
-    a
-      padding: 0.25rem 1rem
+  .menu-list .menu-link
+    padding: 0.25rem 1rem
   .menu-hello
     background: #fff
     flex-grow: 0

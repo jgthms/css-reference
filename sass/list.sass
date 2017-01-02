@@ -1,0 +1,51 @@
+.list
+  padding-bottom: 3rem
+  position: relative
+  .menu-search input
+    font-size: 1rem
+
+.list-list
+  &.is-searching
+    .menu-item
+      display: none
+      &.is-highlighted,
+      &.is-selected,
+        display: flex
+
+.list-item
+  border-top: 1px solid $primary
+  display: flex
+  position: relative
+
+.list-name
+  display: block
+  padding: 1rem
+  transition: none
+
+.list-collections
+  bottom: 0
+  color: rgba(#000, 0.3)
+  display: none
+  font-size: 0.8em
+  justify-content: flex-end
+  position: absolute
+  right: 0
+  top: 0
+  a:hover
+    text-decoration: underline
+  strong
+    color: inherit
+    text-transform: capitalize
+
++desktop
+  .list-name,
+  .list-collections
+    align-items: center
+    display: flex
+    padding: 1rem
+  .list-name
+    flex-grow: 1
+    flex-shrink: 1
+  .list-item
+    align-items: stretch
+    justify-content: flex-start

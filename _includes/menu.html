@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $menuHello = document.getElementById('menuHello');
   var $huggingFace = document.getElementById('huggingFace');
   var $carbon = document.getElementById('carbon');
+  var $placeholder = document.getElementById('placeholder');
 
   setTimeout(function() {
     if (window.carbonLoaded) {
@@ -20,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
       $huggingFace.style.display = 'block';
       $carbon.style.display = 'none';
     }
-  }, 5000);
+    $placeholder.style.display = 'none';
+  }, 2000);
 });
 </script>
 
@@ -44,27 +46,29 @@ document.addEventListener('DOMContentLoaded', function() {
       <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
     </ul>
   </nav>
-  <nav id="menu-nav" class="menu-nav">
-    <div class="menu-search">
-      <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
-      <i class="icon is-search"></i>
-    </div>
-    <div id="menu-list" class="menu-list">
-      <ul id="menu-list-ul" class="menu-list-ul">
-        {% if page.menu_list && page.layout == "collection" %}
-          {% include collections/{{page.menu_list}}.html %}
-        {% else %}
-          {% include lists/menu-list.html %}
-        {% endif %}
-      </ul>
-      <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
-      <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
-    </div>
-    <a id="menu-nav-close" class="menu-close">
-      <i class="icon is-close"></i>
-      <strong>Close</strong>
-    </a>
-  </nav>
+  {% if page.template != "index" %}
+    <nav id="menu-nav" class="menu-nav">
+      <div class="menu-search">
+        <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
+        <i class="icon is-search"></i>
+      </div>
+      <div id="menu-list" class="menu-list">
+        <ul id="menu-list-ul" class="menu-list-ul">
+          {% if page.menu_list && page.layout == "collection" %}
+            {% include collections/{{page.menu_list}}.html %}
+          {% else %}
+            {% include lists/menu-list.html %}
+          {% endif %}
+        </ul>
+        <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
+        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+      </div>
+      <a id="menu-nav-close" class="menu-close">
+        <i class="icon is-close"></i>
+        <strong>Close</strong>
+      </a>
+    </nav>
+  {% endif %}
   <footer id="menuHello" class="menu-hello">
     <div id="huggingFace">
       <p>
@@ -78,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>
         Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
       </p>
+    </div>
+    <div id="placeholder" class="placeholder">
+      <div class="placeholder-image"><div></div></div>
+      <div class="placeholder-content"><div></div><div></div><div></div></div>
+      <div class="placeholder-footer"><div></div></div>
     </div>
     <div id="carbon">
       <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>

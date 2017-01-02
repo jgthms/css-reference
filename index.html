@@ -48,14 +48,19 @@ template: index
         </div>
       </header>
       <section class="list">
-        {% include lists/main-list.html %}
+        <div class="menu-search">
+          <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search 129 CSS properties">
+          <i class="icon is-search"></i>
+        </div>
+        <div id="menu-list" class="list-list">
+          {% include lists/main-list.html %}
+        </div>
       </section>
     </main>
     {% include modals/share.html %}
     {% include google-fonts.html %}
     <script src="{{site.url}}/javascript/clipboard.min.js"></script>
     <script src="{{site.url}}/javascript/main.js"></script>
-    <script src="{{site.url}}/javascript/index.js"></script>
     {% include noscript.html %}
   </body>
 </html>
