@@ -1,0 +1,46 @@
+<script type="text/javascript">
+window.carbonLoaded = false;
+
+window.helloCarbon = function() {
+  window.carbonLoaded = true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Hello
+  var $hello = document.getElementById('hello');
+  var $huggingFace = document.getElementById('huggingFace');
+  var $carbon = document.getElementById('carbon');
+  var $placeholder = document.getElementById('placeholder');
+
+  setTimeout(function() {
+    if (window.carbonLoaded) {
+      $hello.style.minHeight = '218px';
+      $huggingFace.style.display = 'none';
+      $carbon.style.display = 'block';
+    } else {
+      $hello.style.minHeight = '0';
+      $huggingFace.style.display = 'block';
+      $carbon.style.display = 'none';
+    }
+    $placeholder.style.display = 'none';
+  }, 2000);
+});
+</script>
+
+<div id="hello">
+  <div id="huggingFace">
+    <p>CSS Reference is <strong>free</strong> and always will be!</p>
+    <p>Please whitelist us in your ad blocker.</p>
+    <p>Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji"></p>
+  </div>
+
+  <div id="placeholder" class="placeholder">
+    <div class="placeholder-image"><div></div></div>
+    <div class="placeholder-content"><div></div><div></div><div></div></div>
+    <div class="placeholder-footer"><div></div></div>
+  </div>
+
+  <div id="carbon">
+    <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script> -->
+  </div>
+</div>

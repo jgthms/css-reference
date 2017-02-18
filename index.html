@@ -32,30 +32,45 @@ template: index
     {% include favicons.html %}
   </head>
   <body>
-    {% include menu.html %}
-    <main class="main">
-      <header class="header">
-        <div class="header-container">
-          <h1 class="header-figure">
-            {{site.title}}
-          </h1>
-          <h2 class="header-title">
-            A free visual guide to CSS
-          </h2>
-          <p class="header-subtitle">
-            <strong>Learn by example</strong>: <a href="{{site.url}}">cssreference.io</a> is a free visual guide to CSS. It features the most popular properties, and explains them with illustrated and animated examples.
-          </p>
+    <header class="header">
+      <div class="container">
+        <h1 class="header-figure">
+          {{site.title}}
+        </h1>
+        <div class="header-content">
+          <div class="header-carbon">
+            {% include carbon.html %}
+          </div>
+          <div class="header-text">
+            <h2 class="header-title">
+              {{site.subtitle}}
+            </h2>
+            <p class="header-subtitle">
+              <strong>Learn by example</strong>: <a href="{{site.url}}">cssreference.io</a> is a free visual guide to CSS. It features the most popular <strong>properties</strong>, and explains them with illustrated and animated <strong>examples</strong>.
+            </p>
+            <footer class="header-share">
+              {% include social/button-twitter.html %}
+              {% include social/button-facebook.html %}
+            </footer>
+          </div>
         </div>
-      </header>
-      <section class="list">
-        <div class="menu-search">
-          <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search 129 CSS properties">
-          <i class="icon is-search"></i>
+      </div>
+    </header>
+    <main class="index">
+      <nav class="index-collections">
+        <strong>Collections:</strong>
+        <a href="{{site.url}}/animations/">Animations</a>
+        <a href="{{site.url}}/backgrounds/">Backgrounds</a>
+        <a href="{{site.url}}/box-model/">Box model</a>
+        <a href="{{site.url}}/flexbox/">Flexbox</a>
+        <a href="{{site.url}}/positioning/">Positioning</a>
+        <a href="{{site.url}}/transitions/">Transitions</a>
+        <a href="{{site.url}}/typography/">Typography</a>
+      </nav>
+      <div class="container">
+        <div class="index-left">
         </div>
-        <div id="menu-list" class="list-list">
-          {% include lists/main-list.html %}
-        </div>
-      </section>
+      </div>
     </main>
     {% include modals/share.html %}
     {% include google-fonts.html %}

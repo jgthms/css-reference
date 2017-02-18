@@ -1,0 +1,10 @@
+<a class="share-button share-button--twitter"
+  data-social-network="Twitter"
+  data-social-action="tweet"
+  data-social-target="{{site.url}}{{page.url}}"
+  data-tooltip-after="Share on Twitter"
+  href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
+  rel="external nofollow"
+  target="_blank">
+  {% include svg/twitter.html %}
+</a>

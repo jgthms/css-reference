@@ -1,77 +1,79 @@
-$gradient-start: lighten(adjust-hue($primary, -10deg), 10%)
-$gradient-end: lighten(adjust-hue($primary, 10deg), 5%)
-$gradient-top: linear-gradient(135deg, $gradient-start 20%, transparent 20%, transparent 80%, $gradient-end 80%)
-$gradient-bottom: linear-gradient($primary, lighten($primary, 5%))
-
 .header
-  align-items: center
-  background: $plum
-  color: $plum-dark
-  display: flex
-  justify-content: flex-start
-  padding: 3rem 2rem
-  position: relative
-  text-align: left
-
-$height: 96px
-$width: 486px
+  background-color: $background
 
 .header-figure
-  background-image: url("../images/css-reference-title.png")
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: $width $height
-  display: inline-block
-  height: $height
-  overflow: hidden
-  text-indent: -290486px
-  vertical-align: top
-  width: $width
-  @media (max-width: 600px)
-    background-size: ($width / 2) ($height / 2)
-    height: $height / 2
-    width: $width / 2
+  display: flex
+  img:first-child
+    height: 128px
+    width: 128px
+
+.header-carbon
+  background-color: white
+  border-radius: 5px
+  box-shadow: 0 0 1rem rgba(#000, 0.2)
+  display: flex
+  flex-shrink: 0
+  width: 240px
+  #huggingFace
 
 .header-title
-  color: $plum-invert
-  font-size: 1.4rem
-  font-weight: $weight-bold
-  margin-top: 2rem
-  text-shadow: 0 2px 4px rgba(#000, 0.1)
+  color: $text-strong
+  font-size: 1.2rem
+  font-weight: bold
+  line-height: 1.2
+  margin-bottom: 0.5rem
 
 .header-subtitle
-  color: $plum-light
-  max-width: 40em
+  line-height: 1.6rem
   a
-    border-bottom: 1px solid rgba($plum-light, 0.2)
-    color: $plum-light
-    &:hover
-      border-bottom-color: $plum-light
-      color: $plum-light
-  strong
-    color: $plum-light
-
-.back
-  align-items: center
-  background: $link
-  color: $link-invert
-  display: flex
-  font-size: 0.8rem
-  justify-content: flex-start
-  padding: 1rem 1.2rem
-  strong
     color: inherit
-    margin-left: 1em
-  &:hover
-    background: $alpha
-    color: $plum
-    .icon:before,
-    .icon:after
-      background: $plum
+  strong:first-child
+    color: $primary
+
+.header-share
+  align-items: center
+  display: flex
+  justify-content: center
+  .share-button
+    height: 48px
+    width: 48px
+    svg
+      height: 24px
+      width: 24px
+
++mobile
+  .header
+    padding: 30px
+  .header-figure
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    margin-bottom: 30px
+    img:last-child
+      height: 40px
+  .header-carbon
+    justify-content: center
+    margin: 0 auto 2rem
+  .header-subtitle
+    margin-top: 10px
 
 +desktop
   .header
+    padding: 60px 60px 30px
+  .header-figure
+    align-items: center
     justify-content: center
-    min-height: 400px
-    padding: 4rem
-    text-align: center
+    margin-bottom: 30px
+    img:last-child
+      height: 80px
+      margin-left: 20px
+  .header-carbon
+    margin-left: 1rem
+    margin-right: 2rem
+  .header-content
+    align-items: center
+    display: flex
+  .header-text
+    margin-right: 2rem
+  .header-share
+    justify-content: flex-start

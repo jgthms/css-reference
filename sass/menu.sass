@@ -151,14 +151,15 @@
 
 .menu-hello
   background: #fff
-  min-height: 218px
+  #huggingFace
+    background: #fff
 
 #huggingFace
-  background: #fff
   color: $text-strong
   display: none
   font-size: 16px
   line-height: 1.4
+  min-height: 218px
   padding: 1.5rem
   padding-bottom: 1rem
   img
@@ -170,6 +171,7 @@
     position: relative
     &:before
       background: hsl(171, 100%, 81%)
+      background: $primary
       bottom: 0
       content: ""
       height: 2px
@@ -201,7 +203,8 @@
     color: $text-light
     padding: 0.5rem 1rem 1rem
   &:hover
-    background: $background
+    .carbon-wrap a:last-child
+      text-decoration: underline
 
 #placeholder
   display: block
@@ -279,7 +282,10 @@
     display: flex
     flex-grow: 1
     flex-shrink: 1
+  .menu-search input
+    font-size: 0.8rem
   .menu-list .menu-link
+    font-size: 0.8rem
     padding: 0.25rem 1rem
   .menu-hello
     background: #fff
