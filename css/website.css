@@ -85,7 +85,7 @@ th {
   bottom: 100%;
   color: #fff;
   content: attr(data-tooltip);
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.6rem;
   font-weight: 400;
   left: 50%;
@@ -126,7 +126,7 @@ html {
 
 body {
   color: #4d4d4d;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.6; }
 
@@ -144,7 +144,7 @@ a {
   transition-property: background, border-bottom-color, color; }
 
 code {
-  font-family: "Source Code Pro", "Consolas", "Monaco", "Courier", monospace;
+  font-family: "Inconsolata", "Source Code Pro", "Consolas", "Monaco", "Courier", monospace;
   font-size: 0.8em; }
 
 img {
@@ -353,12 +353,12 @@ html ::selection {
   display: block;
   padding: 0 6px; }
   .menu-collection-link:hover {
-    background: #05ffb0;
-    color: #310736; }
+    background: #00d1b2;
+    color: #fff; }
 
 .menu-collection-link--active {
-  background: #05ffb0;
-  color: #310736; }
+  background: #00d1b2;
+  color: #fff; }
 
 .menu-nav {
   align-items: stretch;
@@ -417,10 +417,10 @@ html ::selection {
   color: rgba(0, 0, 0, 0.7); }
 
 .menu-item:hover, .menu-item.is-selected {
-  background: #05ffb0;
-  color: #310736; }
-  .menu-item:hover .menu-item-name, .menu-item.is-selected .menu-item-name {
-    color: #310736; }
+  background: #00d1b2;
+  color: #fff; }
+  .menu-item:hover .item-name, .menu-item.is-selected .item-name {
+    color: #fff; }
 
 .menu-list-shadow {
   display: block;
@@ -642,7 +642,8 @@ html ::selection {
 .header-share {
   align-items: center;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 0.5rem; }
   .header-share .share-button {
     height: 48px;
     width: 48px; }
@@ -828,6 +829,95 @@ html ::selection {
     padding: 1rem; }
     .index-collections strong {
       padding-left: 0; } }
+
+.finder {
+  position: relative; }
+  .finder .menu-search input {
+    font-size: 1rem; }
+
+.finder-list.is-searching .finder-item {
+  display: none; }
+  .finder-list.is-searching .finder-item.is-highlighted:not(.is-hidden) {
+    display: block; }
+  .finder-list.is-searching .finder-item.is-selected {
+    display: block; }
+
+.finder-item {
+  align-items: stretch;
+  cursor: pointer;
+  justify-content: space-between;
+  position: relative; }
+  .finder-item:hover .finder-item-link {
+    background: #f2f2f2; }
+  .finder-item:hover .finder-item-meta .light {
+    opacity: 1; }
+  .finder-item.is-hidden {
+    display: none; }
+  .finder-item.is-selected {
+    z-index: 1; }
+    .finder-item.is-selected .finder-item-link, .finder-item.is-selected .finder-item-link:hover {
+      background: #00d1b2;
+      color: #fff; }
+
+.finder-item-link {
+  display: block;
+  padding: 0.25rem 1rem;
+  transition: none; }
+  .finder-item-link:visited {
+    color: #b86bff; }
+  .finder-item-link:hover {
+    background: #f2f2f2; }
+  .finder-item-link .highlight {
+    background: #ffdd57;
+    color: rgba(0, 0, 0, 0.7); }
+  .finder-item-link .light--experimental {
+    margin-left: 4px;
+    position: relative;
+    top: -1px; }
+
+.finder-item-meta {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .finder-item-meta .light:hover {
+    text-decoration: underline; }
+
+.light {
+  border-radius: 2px;
+  color: #333333;
+  font-size: 0.8em;
+  font-weight: normal;
+  line-height: 1.2;
+  opacity: 0.5;
+  padding: 2px 4px;
+  text-transform: lowercase;
+  white-space: nowrap; }
+
+label.light {
+  cursor: pointer; }
+  label.light input {
+    cursor: pointer;
+    margin-right: 4px; }
+
+@media (max-width: 799px) {
+  .finder {
+    padding-bottom: 1rem; }
+  .finder-item-meta {
+    padding-right: 0.5rem; }
+    .finder-item-meta .light {
+      margin-left: 2px; } }
+
+@media (min-width: 800px) {
+  .finder {
+    padding-bottom: 3rem; }
+  .finder-item-meta {
+    padding: 0 1em; }
+    .finder-item-meta .light {
+      margin-left: 4px; } }
 
 .heading {
   background: #310736;

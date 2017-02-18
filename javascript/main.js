@@ -20,108 +20,110 @@ document.addEventListener('DOMContentLoaded', function() {
   var currentMatch = -1;
   var matches = initializeMatches($menuItems);
 
-  $searchInput.addEventListener('focus', function(event) {
-    isFocused = true;
-    isSearching = true;
-  });
-
-  $searchInput.addEventListener('blur', function(event) {
-    isFocused = false;
-    if (this.value === '') {
-      globalReset();
-    }
-  });
-
-  $searchInput.addEventListener('keyup', function(event) {
-    var query = this.value.toLowerCase();
-    isFocused = (this === document.activeElement);
-
-    if (isFocused) {
+  if ($searchInput) {
+    $searchInput.addEventListener('focus', function(event) {
+      isFocused = true;
       isSearching = true;
+    });
 
-      if (query.length > 0) {
-        matches = [];
-        currentMatch = -1;
-        $menuList.classList.add('is-searching');
-        Array.prototype.forEach.call($menuItems, function($el, index) {
-          var propertyName = $el.dataset.propertyName;
-          var isMatch = highlightQuery($el, propertyName, query);
-
-          if (isMatch) {
-            matches.push({
-              DOMIndex: index,
-              propertyName: propertyName,
-            });
-          }
-        });
-      } else {
-        $menuList.classList.remove('is-searching');
-        Array.prototype.forEach.call($menuItems, function($el) {
-          var $elName = $el.querySelector('.menu-item-name');
-          $elName.innerHTML = $el.dataset.propertyName;
-        });
-      }
-    }
-  });
-
-  window.addEventListener('click', function(event) {
-    if (!isFocused) {
-      isSearching = false;
-      cleanMenu($menuItems, false, true);
-    }
-  });
-
-  window.addEventListener('keydown', function(event) {
-    var key = event.code || event.key || false;
-
-    switch (key) {
-    case 'Enter':
-      if (isSearching && currentMatch > -1) {
-        event.preventDefault();
-        var propertyName = matches[currentMatch].propertyName;
-        var $target = document.getElementById(propertyName);
-
-        if ($target) {
-          $target.scrollIntoView();
-        } else {
-          window.location = window.location.origin + '/property/' + propertyName;
-        }
-      }
-      break;
-    case 'Escape':
-      if (isModaling) {
-        closeModal();
-      } else {
-        isSearching = false;
+    $searchInput.addEventListener('blur', function(event) {
+      isFocused = false;
+      if (this.value === '') {
         globalReset();
       }
-      break;
-    case 'ArrowUp':
-    case 'ArrowDown':
-      if (isSearching) {
-        event.preventDefault();
-        if (isFocused) {
-          $searchInput.blur();
-        }
-        var increment = (key === 'ArrowDown');
-        currentMatch = navigateMenu($menuItems, matches, currentMatch, increment);
+    });
 
-        if (currentMatch === -1) {
-          $searchInput.focus();
+    $searchInput.addEventListener('keyup', function(event) {
+      var query = this.value.toLowerCase();
+      isFocused = (this === document.activeElement);
+
+      if (isFocused) {
+        isSearching = true;
+
+        if (query.length > 0) {
+          matches = [];
+          currentMatch = -1;
+          $menuList.classList.add('is-searching');
+          Array.prototype.forEach.call($menuItems, function($el, index) {
+            var propertyName = $el.dataset.propertyName;
+            var isMatch = highlightQuery($el, propertyName, query);
+
+            if (isMatch) {
+              matches.push({
+                DOMIndex: index,
+                propertyName: propertyName,
+              });
+            }
+          });
+        } else {
+          $menuList.classList.remove('is-searching');
+          Array.prototype.forEach.call($menuItems, function($el) {
+            var $elName = $el.querySelector('.item-name');
+            $elName.innerHTML = $el.dataset.propertyName;
+          });
+        }
+      }
+    });
+
+    window.addEventListener('click', function(event) {
+      if (!isFocused) {
+        isSearching = false;
+        cleanMenu($menuItems, false, true);
+      }
+    });
+
+    window.addEventListener('keydown', function(event) {
+      var key = event.code || event.key || false;
+
+      switch (key) {
+      case 'Enter':
+        if (isSearching && currentMatch > -1) {
+          event.preventDefault();
+          var propertyName = matches[currentMatch].propertyName;
+          var $target = document.getElementById(propertyName);
+
+          if ($target) {
+            $target.scrollIntoView();
+          } else {
+            window.location = window.location.origin + '/property/' + propertyName;
+          }
         }
         break;
-      }
-    }
-  });
+      case 'Escape':
+        if (isModaling) {
+          closeModal();
+        } else {
+          isSearching = false;
+          globalReset();
+        }
+        break;
+      case 'ArrowUp':
+      case 'ArrowDown':
+        if (isSearching) {
+          event.preventDefault();
+          if (isFocused) {
+            $searchInput.blur();
+          }
+          var increment = (key === 'ArrowDown');
+          currentMatch = navigateMenu($menuItems, matches, currentMatch, increment);
 
-  function globalReset() {
-    isFocused = false;
-    $searchInput.value = '';
-    $searchInput.blur();
-    currentMatch = -1;
-    matches = initializeMatches($menuItems);
-    $menuList.classList.remove('is-searching');
-    cleanMenu($menuItems, true, true);
+          if (currentMatch === -1) {
+            $searchInput.focus();
+          }
+          break;
+        }
+      }
+    });
+
+    function globalReset() {
+      isFocused = false;
+      $searchInput.value = '';
+      $searchInput.blur();
+      currentMatch = -1;
+      matches = initializeMatches($menuItems);
+      $menuList.classList.remove('is-searching');
+      cleanMenu($menuItems, true, true);
+    }
   }
 
   // Menu: Shadows
@@ -130,60 +132,64 @@ document.addEventListener('DOMContentLoaded', function() {
   var $menuShadowBottom = document.getElementById('menu-shadow-bottom');
   var menuThrottle = null;
 
-  $menuUl.addEventListener('scroll', function(event) {
-    clearTimeout(menuThrottle);
-    throttle = setTimeout(setMenuShadows(), 100);
-  });
+  if ($menuUl) {
+    $menuUl.addEventListener('scroll', function(event) {
+      clearTimeout(menuThrottle);
+      throttle = setTimeout(setMenuShadows(), 100);
+    });
 
-  function setMenuShadows() {
-    var scrollTop = $menuUl.scrollTop;
-    var height = $menuUl.offsetHeight;
-    var fullHeight = $menuUl.scrollHeight;
-    var maxScroll = fullHeight - height;
-    var threshold = 200;
-    var topFactor = 0;
-    var bottomFactor = 1;
+    function setMenuShadows() {
+      var scrollTop = $menuUl.scrollTop;
+      var height = $menuUl.offsetHeight;
+      var fullHeight = $menuUl.scrollHeight;
+      var maxScroll = fullHeight - height;
+      var threshold = 200;
+      var topFactor = 0;
+      var bottomFactor = 1;
 
-    if (scrollTop > threshold) {
-      topFactor = 1;
-    } else {
-      topFactor = scrollTop / threshold;
+      if (scrollTop > threshold) {
+        topFactor = 1;
+      } else {
+        topFactor = scrollTop / threshold;
+      }
+
+      if (scrollTop < maxScroll - threshold) {
+        bottomFactor = 1;
+      } else {
+        var fromBottom = maxScroll - scrollTop;
+        bottomFactor = fromBottom / threshold;
+      }
+
+      $menuShadowTop.style.opacity = topFactor;
+      $menuShadowTop.style.transform = 'scaleY(' + topFactor + ')';
+      $menuShadowBottom.style.opacity = bottomFactor;
+      $menuShadowBottom.style.transform = 'scaleY(' + bottomFactor + ')';
     }
-
-    if (scrollTop < maxScroll - threshold) {
-      bottomFactor = 1;
-    } else {
-      var fromBottom = maxScroll - scrollTop;
-      bottomFactor = fromBottom / threshold;
-    }
-
-    $menuShadowTop.style.opacity = topFactor;
-    $menuShadowTop.style.transform = 'scaleY(' + topFactor + ')';
-    $menuShadowBottom.style.opacity = bottomFactor;
-    $menuShadowBottom.style.transform = 'scaleY(' + bottomFactor + ')';
+    setMenuShadows();
   }
-  setMenuShadows();
 
   // Menu: Mobile
   var $menuNav = document.getElementById('menu-nav');
   var $menuNavOpen = document.getElementById('menu-nav-open');
   var $menuNavClose = document.getElementById('menu-nav-close');
 
-  $menuNavOpen.addEventListener('click', function(event) {
-    $menuNav.classList.add('is-active');
-  });
-
-  $menuNavClose.addEventListener('click', function(event) {
-    $menuNav.classList.remove('is-active');
-  });
-
-  Array.prototype.forEach.call($menuItems, function($menuItem, index) {
-    $menuItem.addEventListener('click', function(event) {
-      if (window.innerWidth < 800) {
-        $menuNav.classList.remove('is-active');
-      }
+  if ($menuNav) {
+    $menuNavOpen.addEventListener('click', function(event) {
+      $menuNav.classList.add('is-active');
     });
-  });
+
+    $menuNavClose.addEventListener('click', function(event) {
+      $menuNav.classList.remove('is-active');
+    });
+
+    Array.prototype.forEach.call($menuItems, function($menuItem, index) {
+      $menuItem.addEventListener('click', function(event) {
+        if (window.innerWidth < 800) {
+          $menuNav.classList.remove('is-active');
+        }
+      });
+    });
+  }
 
   // Property: Copy to clipboard
   var clipboard = new Clipboard('.example-value');
@@ -310,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if ($target) {
         $target.scrollIntoView();
-        history.replaceState('', document.title, '#' + propertyName);
       } else {
         window.location = window.location.origin + '/property/' + propertyName;
       }
@@ -335,7 +340,7 @@ function initializeMatches($menuItems) {
 
 function cleanMenu($menuItems, highlight, selection) {
   Array.prototype.forEach.call($menuItems, function($el, index) {
-    var $elName = $el.querySelector('.menu-item-name');
+    var $elName = $el.querySelector('.item-name');
     if (highlight) {
       $elName.innerHTML = $el.dataset.propertyName;
       $el.classList.remove('is-highlighted');
@@ -368,7 +373,7 @@ function navigateMenu($menuItems, matches, currentIndex, increment = true) {
 
 function highlightQuery($el, propertyName, query) {
   var queryIndex = propertyName.indexOf(query);
-  var $elName = $el.querySelector('.menu-item-name');
+  var $elName = $el.querySelector('.item-name');
 
   if (queryIndex >= 0) {
     var before = propertyName.substring(0, queryIndex);
