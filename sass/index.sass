@@ -1,0 +1,24 @@
+.index-collections
+  display: flex
+  flex-wrap: wrap
+  line-height: 1.2
+  a,
+  strong
+    border-radius: 2px
+    padding: 3px 6px
+  a
+    &:hover
+      background: $primary
+      color: $primary-invert
+
++mobile
+  .index-collections
+    padding: 1rem 1rem 0
+
++desktop
+  .index-collections
+    border-bottom: 1px solid $border
+    justify-content: center
+    padding: 1rem
+    strong
+      padding-left: 0

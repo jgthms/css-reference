@@ -70,28 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </nav>
   {% endif %}
-  <footer id="menuHello" class="menu-hello">
-    <div id="huggingFace">
-      <p>
-        CSS Reference is <strong>free</strong> and <br>
-        always will be!
-      </p>
-      <p>
-        Please whitelist us in <br>
-        your ad blocker.
-      </p>
-      <p>
-        Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
-      </p>
-    </div>
-    <div id="placeholder" class="placeholder">
-      <div class="placeholder-image"><div></div></div>
-      <div class="placeholder-content"><div></div><div></div><div></div></div>
-      <div class="placeholder-footer"><div></div></div>
-    </div>
-    <div id="carbon">
-      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>
-    </div>
+  <footer class="menu-hello">
+    {% include carbon.html %}
   </footer>
 </aside>
 
@@ -101,21 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </p>
   <p class="footer-share footer-share--social">
     <strong class="footer-share-label">Share</strong>
-    <a class="footer-share-button is-twitter"
-      data-social-network="Twitter"
-      data-social-action="tweet"
-      data-social-target="{{site.url}}{{page.url}}"
-      href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
-      rel="external nofollow"
-      target="_blank">
-      {% include svg/twitter.html %}
-    </a>
-    <a class="footer-share-button is-facebook"
-      href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
-      rel="external nofollow"
-      target="_blank">
-      {% include svg/facebook.html %}
-    </a>
+    {% include social/button-twitter.html %}
+    {% include social/button-facebook.html %}
     <a id="menu-nav-open" class="footer-share-nav">Menu</a>
   </p>
   <div class="footer-facebook">

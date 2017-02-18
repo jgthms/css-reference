@@ -1,7 +1,9 @@
 [data-tooltip]
+  cursor: pointer
   position: relative
 
-[data-tooltip]:before
+[data-tooltip]:before,
+[data-tooltip-after]:after
   background-color: $text-strong
   border-radius: 2px
   bottom: 100%
@@ -9,6 +11,7 @@
   content: attr(data-tooltip)
   font-family: $family-primary
   font-size: 0.6rem
+  font-weight: 400
   left: 50%
   line-height: 1.2
   opacity: 0
@@ -22,7 +25,11 @@
   visibility: hidden
   white-space: nowrap
 
-[data-tooltip]:hover:before
+[data-tooltip-after]:after
+  content: attr(data-tooltip-after)
+
+[data-tooltip]:hover:before,
+[data-tooltip-after]:hover:after
   opacity: 1
   transform: translateX(-50%) translateY(-4px)
   visibility: visible
