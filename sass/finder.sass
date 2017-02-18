@@ -1,0 +1,94 @@
+.finder
+  position: relative
+  .menu-search
+    input
+      font-size: 1rem
+
+.finder-list
+  &.is-searching
+    .finder-item
+      display: none
+      &.is-highlighted:not(.is-hidden)
+        display: block
+      &.is-selected
+        display: block
+
+.finder-item
+  align-items: stretch
+  cursor: pointer
+  justify-content: space-between
+  position: relative
+  &:hover
+    .finder-item-link
+      background: $background
+    .finder-item-meta .light
+      opacity: 1
+  &.is-hidden
+    display: none
+  &.is-selected
+    z-index: 1
+    .finder-item-link
+      &,
+      &:hover
+        background: $primary
+        color: $primary-invert
+
+.finder-item-link
+  display: block
+  padding: 0.25rem 1rem
+  transition: none
+  &:visited
+    color: $purple
+  &:hover
+    background: $background
+  .highlight
+    background: $yellow
+    color: $yellow-invert
+  .light--experimental
+    margin-left: 4px
+    position: relative
+    top: -1px
+
+.finder-item-meta
+  align-items: center
+  bottom: 0
+  display: flex
+  justify-content: flex-end
+  position: absolute
+  right: 0
+  top: 0
+  .light:hover
+    text-decoration: underline
+
+.light
+  border-radius: 2px
+  color: $text-strong
+  font-size: 0.8em
+  font-weight: normal
+  line-height: 1.2
+  opacity: 0.5
+  padding: 2px 4px
+  text-transform: lowercase
+  white-space: nowrap
+
+label.light
+  cursor: pointer
+  input
+    cursor: pointer
+    margin-right: 4px
+
++mobile
+  .finder
+    padding-bottom: 1rem
+  .finder-item-meta
+    padding-right: 0.5rem
+    .light
+      margin-left: 2px
+
++desktop
+  .finder
+    padding-bottom: 3rem
+  .finder-item-meta
+    padding: 0 1em
+    .light
+      margin-left: 4px
