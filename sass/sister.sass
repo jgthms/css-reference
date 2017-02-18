@@ -1,0 +1,44 @@
+.sisters
+  background-color: $background
+
+.sister-banner
+  display: flex
+
+.sister--htmlreference
+  .sister-banner img
+    height: 48px
+
+.sister--bulma
+  .sister-banner img
+    height: 48px
+
++mobile
+  .sisters
+    padding: 40px 20px
+    text-align: center
+    .sister + .sister
+      margin-top: 40px
+  .sister-banner
+    justify-content: center
+    margin-top: 10px
+
++desktop
+  .sisters
+    padding: 60px
+    .sister
+      align-items: center
+      display: flex
+      padding-left: 1rem
+      & + .sister
+        margin-top: 60px
+  .sister-title
+    flex-grow: 1
+  .sister-banner
+    flex-shrink: 0
+    width: 420px
+  .sister--htmlreference
+    .sister-banner img
+      height: 72px
+  .sister--bulma
+    .sister-banner img
+      height: 64px
