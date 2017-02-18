@@ -27,14 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <aside class="menu">
-  <header class="menu-header">
-    <a id="logo" class="menu-logo" href="{{site.url}}">
-      <figure>
-        <img class="menu-logo-icon" src="{{site.url}}/images/css-reference-icon.png" alt="CSS Reference icon">
-        <img class="menu-logo-type" src="{{site.url}}/images/css-reference-type.png" alt="CSS Reference type">
-      </figure>
-    </a>
-  </header>
+  <a id="logo" class="menu-logo" href="{{site.url}}">
+    <img src="{{site.url}}/images/css-reference-logo.png" alt="{{site.title}} logo">
+  </a>
   <nav class="menu-collections">
     <ul>
       <li><a class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}/">All properties</a></li>
