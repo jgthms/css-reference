@@ -1,0 +1,52 @@
+.ff
+  align-items: center
+  background-color: $fortyfour
+  color: #fff
+  display: flex
+  justify-content: center
+  overflow: hidden
+  padding: 1rem
+  position: relative
+  strong
+    color: currentColor
+  .tag
+    background-color: $red
+    // border: 1px solid $red
+    border-radius: 2px
+    color: #fff
+    margin-right: 0.5em
+    padding: 0.25em 0.5em 0.375em
+  .button
+    position: relative
+    transform-origin: center
+    transition-duration: $speed
+    transition-property: transform
+    white-space: nowrap
+  &:hover
+    .button
+      transform: scale(1.1)
+
+.ff-background
+  +overlay
+  background-image: url("/images/fortyfour-background.jpg")
+  background-position: center center
+  background-size: cover
+  opacity: 0.5
+
+.ff-text
+  line-height: 1.25
+  margin-right: 0.5rem
+  position: relative
+
+.ff-button
+  display: inline-block
+  flex-shrink: 0
+  height: 34px
+  position: relative
+  width: 145px
+  img
+    max-height: 100%
+
++from(480px)
+  .ff-text
+    margin-right: 1rem
