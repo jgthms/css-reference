@@ -16,7 +16,7 @@
     "sass",
     "jekyll"
   ],
-  "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+  "author": "Jeremy Thomas <bbxdesign@gmail.com> (https://jgthms.com)",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",

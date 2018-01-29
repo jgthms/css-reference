@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $propertyShares = document.querySelectorAll('.property-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
-  baseURL = 'http://cssreference.io/';
+  baseURL = 'https://cssreference.io/';
   var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
   var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
 
