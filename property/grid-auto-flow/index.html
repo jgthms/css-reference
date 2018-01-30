@@ -1,0 +1,77 @@
+---
+layout: single
+property_name: grid-auto-flow
+---
+
+<section id="grid-auto-flow" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+        <a class="property-collection" href="{{site.url}}/css-grid/">
+          In collection: <strong>CSS Grid</strong>
+        </a>
+      <a class="property-links-direct" href="{{site.url}}/property/grid-auto-flow/" data-property-name="grid-auto-flow" data-tooltip="Single page for this property">Permalink</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="grid-auto-flow">Share</a>
+        <a target="_blank" href="http://caniuse.com/#feat=css-grid" data-tooltip="See on Can I use..." rel="external">Can I use</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/grid-auto-flow" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="#grid-auto-flow"><span>#</span>grid-auto-flow</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines the position of auto-generated <strong>grid items</strong>.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.grid-auto-flow { display: grid;grid-template-areas: "header header header" "sidebar main main" "footer footer footer";padding: 0; }</style>
+
+
+    <style type="text/css">.grid-auto-flow .block--alpha { grid-area: header; }.grid-auto-flow .block--beta { grid-area: sidebar; }.grid-auto-flow .block--pink { grid-area: main; }.grid-auto-flow .block--yellow { grid-area: footer; }</style>
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-auto-flow: row;">grid-auto-flow: row;</code>
+        </p>
+        <div class="example-description">
+          <p>Here we have <code>grid-template-areas: &quot;header header header&quot; &quot;sidebar main main&quot; &quot;footer footer footer&quot;</code>, plus an additional &quot;Other&quot; grid item. The algorithm places it on its own <strong>row</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-row"><p class="block block--alpha">Header</p><p class="block block--beta">Sidebar</p><p class="block block--pink">Main</p><p class="block block--yellow">Footer</p><p class="block block--purple">Other</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-auto-flow-row{ grid-auto-flow:row;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-auto-flow: column;">grid-auto-flow: column;</code>
+        </p>
+        <div class="example-description">
+          <p>Here we have <code>grid-template-areas: &quot;header header header&quot; &quot;sidebar main main&quot; &quot;footer footer footer&quot;</code>, plus an additional &quot;Other&quot; grid item. The algorithm places it in its own <strong>column</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-column"><p class="block block--alpha">Header</p><p class="block block--beta">Sidebar</p><p class="block block--pink">Main</p><p class="block block--yellow">Footer</p><p class="block block--purple">Other</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-auto-flow-column{ grid-auto-flow:column;}</style>
+    </section>
+
+</section>

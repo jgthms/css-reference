@@ -1,0 +1,118 @@
+---
+layout: single
+property_name: grid-template-columns
+---
+
+<section id="grid-template-columns" class="property">
+  <header class="property-header">
+    <nav class="property-links">
+        <a class="property-collection" href="{{site.url}}/css-grid/">
+          In collection: <strong>CSS Grid</strong>
+        </a>
+      <a class="property-links-direct" href="{{site.url}}/property/grid-template-columns/" data-property-name="grid-template-columns" data-tooltip="Single page for this property">Permalink</a>
+      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="grid-template-columns">Share</a>
+        <a target="_blank" href="http://caniuse.com/#feat=css-grid" data-tooltip="See on Can I use..." rel="external">Can I use</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/grid-template-columns" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="property-name">
+      <a href="#grid-template-columns"><span>#</span>grid-template-columns</a>
+    </h2>
+    <div class="property-description">
+      <p>Defines the columns of a <strong>grid container</strong>. You can specify the width of a column by using a keyword (like <code>auto</code>) or a length (like <code>10px</code>). The number of columns is determined by the number of <strong>values</strong> defined in the space-separated list.</p>
+
+    </div>
+
+  </header>
+
+    <style type="text/css">.grid-template-columns { display: grid;padding: 0; }</style>
+
+
+
+
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-template-columns: none;">grid-template-columns: none;</code>
+        </p>
+        <div class="example-description">
+          <p>No columns are defined, so you only have one.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-template-columns " id="grid-template-columns-none"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-template-columns-none{ grid-template-columns:none;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-template-columns: auto auto auto;">grid-template-columns: auto auto auto;</code>
+        </p>
+        <div class="example-description">
+          <p>You can use the keyword <code>auto</code> so that each column resizes itself automatically.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-template-columns " id="grid-template-columns-auto-auto-auto"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-template-columns-auto-auto-auto{ grid-template-columns:auto auto auto;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-template-columns: 80px auto 1rem;">grid-template-columns: 80px auto 1rem;</code>
+        </p>
+        <div class="example-description">
+          <p>You can mix the <strong>units</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-template-columns " id="grid-template-columns-80px-auto-1rem"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-template-columns-80px-auto-1rem{ grid-template-columns:80px auto 1rem;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-template-columns: 40px 1fr 2fr;">grid-template-columns: 40px 1fr 2fr;</code>
+        </p>
+        <div class="example-description">
+          <p>You can use the <code>fr</code> <strong>flex unit</strong> to distribute the <strong>remaining space</strong> across all flex columns.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-template-columns " id="grid-template-columns-40px-1fr-2fr"><p class="block block--alpha"><strong>1.</strong> One</p><p class="block block--beta"><strong>2.</strong> Two</p><p class="block block--pink"><strong>3.</strong> Three</p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-template-columns-40px-1fr-2fr{ grid-template-columns:40px 1fr 2fr;}</style>
+    </section>
+
+</section>
