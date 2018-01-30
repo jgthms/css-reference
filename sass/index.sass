@@ -1,15 +1,27 @@
 .index-collections
+  align-items: center
   display: flex
   flex-wrap: wrap
   line-height: 1.2
   a,
   strong
     border-radius: 2px
-    padding: 3px 6px
+    padding: 5px 10px
   a
     &:hover
       background: $primary
       color: $primary-invert
+    &.is-new
+      align-items: center
+      box-shadow: 0 0 0 1px $red
+      display: flex
+      &:hover
+        background: $red
+  .tag
+    font-size: 0.75em
+    margin-left: 0.5em
+    position: relative
+    vertical-align: middle
 
 +mobile
   .index-collections

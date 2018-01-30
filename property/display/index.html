@@ -248,5 +248,52 @@ property_name: display
       </aside>
         <style type="text/css">#display-inline-flex .block--alpha { display: inline-flex;height: 3em;width: 120px; }</style>
     </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="display: grid;">display: grid;</code>
+        </p>
+        <div class="example-description">
+          <p>The element is turned into an <strong>grid</strong> container. On its own, it behaves like a block element.</p>
+<p>Its child elements will be turned into <strong>grid items</strong>.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div display " id="display-grid"><div class="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p class="block block--alpha"><span>First child</span> <span>Second child</span></p> Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#display-grid .block--alpha { display: grid;grid-template-columns: auto auto; }</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="display: inline-grid;">display: inline-grid;</code>
+        </p>
+        <div class="example-description">
+          <p>The element shares properties of both an <strong>inline</strong> and a <strong>grid</strong> element:</p>
+<ul><li><strong>inline</strong> because the element behaves like simple text, and inserts itself in a block of text</li><li><strong>grid</strong> because its child element will be turned into flexbox items</ul><p>For example, this element has:</p>
+<pre>.element{
+  height: 3em;
+  width: 120px;
+}</pre>
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div display " id="display-inline-grid"><div class="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p class="block block--alpha"><span>First child</span> <span>Second child</span></p> Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</div></div>
+        </div>
+      </aside>
+        <style type="text/css">#display-inline-grid .block--alpha { display: inline-grid;grid-template-columns: auto auto;height: 3em;width: 120px; }</style>
+    </section>
 
 </section>
