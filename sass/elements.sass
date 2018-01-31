@@ -147,3 +147,68 @@
 .emoji
   font-size: 1.25em
   vertical-align: middle
+
+.bsa-shadow
+  background: linear-gradient(rgba(#000, 0.1), rgba(#000, 0))
+  display: block
+  height: 1rem
+  left: 0
+  opacity: 0
+  pointer-events: none
+  position: absolute
+  right: 0
+  top: 42px
+  transform-origin: center top
+
+.bsa-cpc
+  background-color: #fff
+  font-size: 16px
+  line-height: 1.4
+  padding: 10px
+  text-align: center
+  & > div
+    +center
+  .default-ad
+    background-color: $primary
+    border-radius: 2px
+    color: $primary-invert
+    font-size: 12px
+    order: 2
+    margin-left: 10px
+    padding: 0 4px
+    text-transform: uppercase
+  a._default_
+    +center
+    flex-wrap: wrap
+    min-height: 20px
+    order: 1
+    &:hover
+      text-decoration: underline
+  .default-image
+    +center
+    height: 20px
+    padding-right: 10px
+    img
+      height: 20px
+  .default-title
+    padding-right: 5px
+    &:after
+      content: " — "
+
++mobile
+  .bsa-cpc
+    border-top: 1px solid $border
+
++desktop
+  .properties--single
+    padding-top: 42px
+  .bsa-cpc
+    min-height: 42px
+  .ola .bsa-cpc,
+  .alo.is-fixed .bsa-cpc
+    left: $menu-width
+    position: fixed
+    right: 0
+    top: 0
+  .alo
+    min-height: 42px

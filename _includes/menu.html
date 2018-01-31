@@ -11,18 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var $carbon = document.getElementById('carbon');
   var $placeholder = document.getElementById('placeholder');
 
-  setTimeout(function() {
-    if (window.carbonLoaded) {
-      $menuHello.style.minHeight = '218px';
-      $huggingFace.style.display = 'none';
-      $carbon.style.display = 'block';
-    } else {
-      $menuHello.style.minHeight = '0';
-      $huggingFace.style.display = 'block';
-      $carbon.style.display = 'none';
-    }
-    $placeholder.style.display = 'none';
-  }, 2000);
+  if ($menuHello) {
+    setTimeout(function() {
+      if (window.carbonLoaded) {
+        $menuHello.style.minHeight = '218px';
+        $huggingFace.style.display = 'none';
+        $carbon.style.display = 'block';
+      } else {
+        $menuHello.style.minHeight = '0';
+        $huggingFace.style.display = 'block';
+        $carbon.style.display = 'none';
+      }
+      $placeholder.style.display = 'none';
+    }, 2000);
+  }
 });
 </script>
 

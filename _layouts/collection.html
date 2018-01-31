@@ -55,7 +55,10 @@
           </a>
         </p>
       </header>
-      {% include bsa.html %}
+      {% include ff.html %}
+      <div id="alo" class="alo">
+        {% include bsa.html %}
+      </div>
       <section class="properties">
         {{content}}
       </section>
@@ -64,6 +67,7 @@
     {% include google-fonts.html %}
     <script src="{{site.url}}/javascript/clipboard.min.js"></script>
     <script src="{{site.url}}/javascript/main.js"></script>
+    <script src="{{site.url}}/javascript/collection.js"></script>
     {% include noscript.html %}
   </body>
 </html>

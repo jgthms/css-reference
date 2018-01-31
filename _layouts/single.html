@@ -29,8 +29,11 @@
   <body>
     {% include menu.html %}
     <main class="main">
-      {% include bsa.html %}
-      <section class="properties">
+      <div class="ola">
+        {% include bsa.html %}
+      </div>
+      <section class="properties properties--single">
+        {% include ff.html %}
         {{content}}
       </section>
     </main>
@@ -38,6 +41,7 @@
     {% include google-fonts.html %}
     <script src="{{site.url}}/javascript/clipboard.min.js"></script>
     <script src="{{site.url}}/javascript/main.js"></script>
+    <script src="{{site.url}}/javascript/single.js"></script>
     {% include noscript.html %}
   </body>
 </html>
