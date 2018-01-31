@@ -24,10 +24,10 @@ property_name: grid-auto-flow
 
   </header>
 
-    <style type="text/css">.grid-auto-flow { display: grid;grid-template-areas: "header header header" "sidebar main main" "footer footer footer";padding: 0; }</style>
+    <style type="text/css">.grid-auto-flow { display: grid;grid-template-columns: 1fr 1fr;padding: 0; }</style>
 
 
-    <style type="text/css">.grid-auto-flow .block--alpha { grid-area: header; }.grid-auto-flow .block--beta { grid-area: sidebar; }.grid-auto-flow .block--pink { grid-area: main; }.grid-auto-flow .block--yellow { grid-area: footer; }</style>
+    <style type="text/css">.grid-auto-flow .two-wide { grid-column: span 2; }.grid-auto-flow .four-tall { grid-row: span 4; }</style>
 
 
     <section class="example">
@@ -39,7 +39,8 @@ property_name: grid-auto-flow
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-auto-flow: row;">grid-auto-flow: row;</code>
         </p>
         <div class="example-description">
-          <p>Here we have <code>grid-template-areas: &quot;header header header&quot; &quot;sidebar main main&quot; &quot;footer footer footer&quot;</code>, plus an additional &quot;Other&quot; grid item. The algorithm places it on its own <strong>row</strong>.</p>
+          <p>In this <strong>two-columns</strong> setup, the second grid item is two-columns wide, the third item is four-rows tall.</p>
+<p>The other grid items are placed on additional <strong>rows</strong>.</p>
 
         </div>
       </header>
@@ -47,7 +48,7 @@ property_name: grid-auto-flow
       <aside class="example-preview">
         <div class="example-browser"><i></i><i></i><i></i></div>
         <div class="example-output">
-          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-row"><p class="block block--alpha">Header</p><p class="block block--beta">Sidebar</p><p class="block block--pink">Main</p><p class="block block--yellow">Footer</p><p class="block block--purple">Other</p></div>
+          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-row"><p class="block block--alpha"><strong>1.</strong> One</p><p class="two-wide block block--beta"><strong>2.</strong> Two: <strong>2 columns wide</strong></p><p class="four-tall block block--pink"><strong>3.</strong> Three: <strong>4 rows tall</strong></p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p><p class="block block--alpha"><strong>7.</strong> Seven</p><p class="block block--beta"><strong>8.</strong> Eight</p><p class="block block--yellow"><strong>9.</strong> Nine</p></div>
         </div>
       </aside>
           <style type="text/css">#grid-auto-flow-row{ grid-auto-flow:row;}</style>
@@ -60,7 +61,7 @@ property_name: grid-auto-flow
           <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-auto-flow: column;">grid-auto-flow: column;</code>
         </p>
         <div class="example-description">
-          <p>Here we have <code>grid-template-areas: &quot;header header header&quot; &quot;sidebar main main&quot; &quot;footer footer footer&quot;</code>, plus an additional &quot;Other&quot; grid item. The algorithm places it in its own <strong>column</strong>.</p>
+          <p>The other grid items are placed on additional <strong>columns</strong>.</p>
 
         </div>
       </header>
@@ -68,10 +69,31 @@ property_name: grid-auto-flow
       <aside class="example-preview">
         <div class="example-browser"><i></i><i></i><i></i></div>
         <div class="example-output">
-          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-column"><p class="block block--alpha">Header</p><p class="block block--beta">Sidebar</p><p class="block block--pink">Main</p><p class="block block--yellow">Footer</p><p class="block block--purple">Other</p></div>
+          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-column"><p class="block block--alpha"><strong>1.</strong> One</p><p class="two-wide block block--beta"><strong>2.</strong> Two: <strong>2 columns wide</strong></p><p class="four-tall block block--pink"><strong>3.</strong> Three: <strong>4 rows tall</strong></p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p><p class="block block--alpha"><strong>7.</strong> Seven</p><p class="block block--beta"><strong>8.</strong> Eight</p><p class="block block--yellow"><strong>9.</strong> Nine</p></div>
         </div>
       </aside>
           <style type="text/css">#grid-auto-flow-column{ grid-auto-flow:column;}</style>
+    </section>
+    <section class="example">
+      <header class="example-header">
+        <p class="example-name">
+
+
+          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="grid-auto-flow: dense;">grid-auto-flow: dense;</code>
+        </p>
+        <div class="example-description">
+          <p>The <strong>dense</strong> algorithm tries to place all other grid items in order to fill all the &quot;holes&quot; in the grid.</p>
+
+        </div>
+      </header>
+
+      <aside class="example-preview">
+        <div class="example-browser"><i></i><i></i><i></i></div>
+        <div class="example-output">
+          <div class="example-output-div grid-auto-flow " id="grid-auto-flow-dense"><p class="block block--alpha"><strong>1.</strong> One</p><p class="two-wide block block--beta"><strong>2.</strong> Two: <strong>2 columns wide</strong></p><p class="four-tall block block--pink"><strong>3.</strong> Three: <strong>4 rows tall</strong></p><p class="block block--yellow"><strong>4.</strong> Four</p><p class="block block--orange"><strong>5.</strong> Five</p><p class="block block--purple"><strong>6.</strong> Six</p><p class="block block--alpha"><strong>7.</strong> Seven</p><p class="block block--beta"><strong>8.</strong> Eight</p><p class="block block--yellow"><strong>9.</strong> Nine</p></div>
+        </div>
+      </aside>
+          <style type="text/css">#grid-auto-flow-dense{ grid-auto-flow:dense;}</style>
     </section>
 
 </section>
