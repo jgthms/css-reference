@@ -1,93 +1,179 @@
 <script type="text/javascript">
-window.carbonLoaded = false;
+  window.carbonLoaded = false;
 
-window.helloCarbon = function() {
-  window.carbonLoaded = true;
-}
+  window.helloCarbon = function () {
+    window.carbonLoaded = true;
+  };
 
-document.addEventListener('DOMContentLoaded', function() {
-  var $menuHello = document.getElementById('menuHello');
-  var $huggingFace = document.getElementById('huggingFace');
-  var $carbon = document.getElementById('carbon');
-  var $placeholder = document.getElementById('placeholder');
+  document.addEventListener("DOMContentLoaded", function () {
+    var $menuHello = document.getElementById("menuHello");
+    var $huggingFace = document.getElementById("huggingFace");
+    var $carbon = document.getElementById("carbon");
+    var $placeholder = document.getElementById("placeholder");
 
-  if ($menuHello) {
-    setTimeout(function() {
-      if (window.carbonLoaded) {
-        $menuHello.style.minHeight = '218px';
-        $huggingFace.style.display = 'none';
-        $carbon.style.display = 'block';
-      } else {
-        $menuHello.style.minHeight = '0';
-        $huggingFace.style.display = 'block';
-        $carbon.style.display = 'none';
-      }
-      $placeholder.style.display = 'none';
-    }, 2000);
-  }
-});
+    if ($menuHello) {
+      setTimeout(function () {
+        if (window.carbonLoaded) {
+          $menuHello.style.minHeight = "218px";
+          $huggingFace.style.display = "none";
+          $carbon.style.display = "block";
+        } else {
+          $menuHello.style.minHeight = "0";
+          $huggingFace.style.display = "block";
+          $carbon.style.display = "none";
+        }
+        $placeholder.style.display = "none";
+      }, 2000);
+    }
+  });
 </script>
 
 <aside class="menu">
   <a id="logo" class="menu-logo" href="{{site.url}}">
-    <img src="{{site.url}}/images/css-reference-logo.png" alt="{{site.title}} logo">
+    <img
+      src="{{site.url}}/images/css-reference-logo.png"
+      alt="{{site.title}} logo"
+    />
   </a>
   <nav class="menu-collections">
     <ul>
-      <li><a class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}/">All properties</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Backgrounds' %} menu-collection-link--active{% endif %}" href="{{site.url}}/backgrounds/">Backgrounds</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Grid' %} menu-collection-link--active{% endif %}" href="{{site.url}}/css-grid/">CSS Grid</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}" href="{{site.url}}/positioning/">Positioning</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}" href="{{site.url}}/transitions/">Transitions</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/"
+          >All properties</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/animations/"
+          >Animations</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Backgrounds' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/backgrounds/"
+          >Backgrounds</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/box-model/"
+          >Box model</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/flexbox/"
+          >Flexbox</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Grid' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/css-grid/"
+          >CSS Grid</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/positioning/"
+          >Positioning</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/transitions/"
+          >Transitions</a
+        >
+      </li>
+      <li>
+        <a
+          class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}"
+          href="{{site.url}}/typography/"
+          >Typography</a
+        >
+      </li>
     </ul>
   </nav>
   {% if page.template != "index" %}
-    <nav id="menu-nav" class="menu-nav">
-      <div class="menu-search">
-        <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
-        <i class="icon is-search"></i>
-      </div>
-      <div id="menu-list" class="menu-list">
-        <ul id="menu-list-ul" class="menu-list-ul">
-          {% if page.menu_list && page.layout == "collection" %}
-            {% include collections/{{page.menu_list}}.html %}
-          {% else %}
-            {% include lists/menu-list.html %}
-          {% endif %}
-        </ul>
-        <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
-        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
-      </div>
-      <a id="menu-nav-close" class="menu-close">
-        <i class="icon is-close"></i>
-        <strong>Close</strong>
-      </a>
-    </nav>
+  <nav id="menu-nav" class="menu-nav">
+    <div class="menu-search">
+      <input
+        id="menu-search-input"
+        type="search"
+        autocomplete="off"
+        placeholder="Search for a property"
+      />
+      <i class="icon is-search"></i>
+    </div>
+    <div id="menu-list" class="menu-list">
+      <ul id="menu-list-ul" class="menu-list-ul">
+        {% if page.menu_list && page.layout == "collection" %} {% include
+        collections/{{page.menu_list}}.html %} {% else %} {% include
+        lists/menu-list.html %} {% endif %}
+      </ul>
+      <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
+      <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+    </div>
+    <a id="menu-nav-close" class="menu-close">
+      <i class="icon is-close"></i>
+      <strong>Close</strong>
+    </a>
+  </nav>
   {% endif %}
-  <footer class="menu-hello">
-    {% include carbon.html %}
-  </footer>
+  <footer class="menu-hello">{% include carbon.html %}</footer>
 </aside>
 
 <footer class="footer">
   <p class="footer-title">
-    <strong>{{site.subtitle}}</strong> <small>Created by <a href="https://jgthms.com">@jgthms</a></small>
+    <strong>{{site.subtitle}}</strong>
+    <small>Created by <a href="https://jgthms.com">@jgthms</a></small>
   </p>
   <p class="footer-share footer-share--social">
     <strong class="footer-share-label">Share</strong>
-    {% include social/button-twitter.html %}
-    {% include social/button-facebook.html %}
+    {% include social/button-twitter.html %} {% include
+    social/button-facebook.html %}
     <a id="menu-nav-open" class="footer-share-nav">Menu</a>
   </p>
   <div class="footer-facebook">
-    <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <iframe
+      class="footer-iframe"
+      data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670"
+      width="100"
+      height="20"
+      scrolling="no"
+      frameborder="0"
+      allowTransparency="true"
+    ></iframe>
+  </div>
+  <div class="footer-facebook" style="margin-right: 1rem">
+    <p>
+      Browser testing via
+      <a href="https://www.lambdatest.com/" target="_blank"
+        ><img
+          src="https://www.lambdatest.com/support/img/logo.svg"
+          style="vertical-align: middle; margin-left: 5px"
+          width="147"
+          height="26"
+      /></a>
+    </p>
   </div>
   <div class="footer-github">
-    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <iframe
+      class="footer-iframe"
+      data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true"
+      frameborder="0"
+      scrolling="0"
+      width="110px"
+      height="20px"
+    ></iframe>
   </div>
   <!-- <p class="footer-share footer-share--contribute">
     <strong class="footer-share-label">Contribute</strong>
